@@ -1,0 +1,54 @@
+{
+  "sourceId": "c1030346-e94b-4a64-b4ca-12bf10774c63",
+  "sourceSlug": "dertour-demo-mobile",
+  "eventTypes": {
+    "dtr_mobile_state": "4572680a-c44c-4b72-86d2-1ddb61e76dd5",
+    "dtr_hotel_view": "00fe223f-f317-4fd0-96d7-58c3ec2c9032",
+    "dtr_show_home": "499d6df7-5109-4c57-8d2b-9adb6cd18478",
+    "dtr_show_saved": "751dcae4-1897-4033-a768-6c77953c679f",
+    "dtr_show_trip": "e8fac0fc-4af4-4fee-9456-61e0d84489f1",
+    "dtr_show_profile": "7796fc8c-8069-4314-a070-769c3dc8ac33",
+    "dtr_show_hotel": "2e4c7e79-841d-448a-91a4-25f52c462b8f",
+    "dtr_show_checkout": "24fd9093-5e4b-42a7-822a-148cf709956f",
+    "dtr_booking_saved": "3f4ca577-a5f4-40f2-999f-10c6f58f8267",
+    "dtr_price_drop": "ff31c76b-e699-4d3c-a931-e906b9515db3",
+    "dtr_documents_opened": "d647128d-59c4-4f9c-953b-b7ebd4a09b9b",
+    "dtr_checkin_ready": "696a6b01-c809-4b51-ba2f-5faa83211799",
+    "dtr_feedback_prompt": "125b911f-cf23-44c7-b8f9-71c5ff7f74b4",
+    "dtr_local_notification_preview": "2eaf2032-f0c1-48df-b725-7f457ccbcca7"
+  },
+  "messages": {
+    "home": {
+      "id": "502856fc-8b03-4ca7-b9e6-039e4b3b98ee",
+      "name": "DTR Mobile | Home inspiration · inline"
+    },
+    "pretrip": {
+      "id": "55ece776-bb57-41ea-b032-48d6c95a8b48",
+      "name": "DTR Mobile | Pre-departure companion · inline"
+    },
+    "recovery": {
+      "id": "46bd06c7-af1e-43b6-b883-cff411defdf4",
+      "name": "DTR Mobile | Saved booking · modal"
+    },
+    "price": {
+      "id": "a5f8d8c2-ee7e-48a6-b586-03687729ac2d",
+      "name": "DTR Mobile | Price watch · modal"
+    },
+    "feedback": {
+      "id": "116e88f7-b79a-4101-84db-5dac7215fbb1",
+      "name": "DTR Mobile | Post-trip feedback · modal"
+    }
+  },
+  "audiences": {
+    "recovery": "f4fffa30-3c7d-4e29-b53d-cd5ef8785ff7",
+    "pretrip": "64d348fa-d036-45c6-936a-34316f516c73",
+    "feedback": "a75abe23-9ee3-4e54-846b-c6a229a5426a",
+    "price": "392b764a-9608-4845-9f75-2842550de96b"
+  },
+  "attribute": "dtr_mobile_context",
+  "profileEndpoint": "bdc4b209-9fd0-4cab-8068-1f82ea15527a",
+  "dashboard": {
+    "id": "4284f257-83b4-4972-ba7b-53716b6bf146",
+    "name": "DTR | 05 Mobile app • synthetic journeys & native in-app engagement"
+  }
+}

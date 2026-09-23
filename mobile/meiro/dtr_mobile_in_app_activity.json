@@ -1,0 +1,35 @@
+{
+  "type": "realtime",
+  "name": "DTR mobile in-app activity",
+  "query": "SELECT payload->'event_data'->>'message_id' AS message_id,CASE payload->'event_data'->>'message_id' WHEN '502856fc-8b03-4ca7-b9e6-039e4b3b98ee' THEN 'DTR Mobile | Home inspiration · inline' WHEN '55ece776-bb57-41ea-b032-48d6c95a8b48' THEN 'DTR Mobile | Pre-departure companion · inline' WHEN '46bd06c7-af1e-43b6-b883-cff411defdf4' THEN 'DTR Mobile | Saved booking · modal' WHEN 'a5f8d8c2-ee7e-48a6-b586-03687729ac2d' THEN 'DTR Mobile | Price watch · modal' WHEN '116e88f7-b79a-4101-84db-5dac7215fbb1' THEN 'DTR Mobile | Post-trip feedback · modal' ELSE payload->'event_data'->>'message_id' END AS message_name,payload->'event_data'->>'display_id' AS display_id,CASE WHEN event_type_id='ddfb99e2-47be-480c-9438-73c5feef5ef3' THEN 1 ELSE 0 END AS impressions,CASE WHEN event_type_id='51f07817-4758-4125-9924-958b42dab999' THEN 1 ELSE 0 END AS clicks,CASE WHEN event_type_id='11dea560-a24f-4972-a4bb-d5bef9013cf4' THEN 1 ELSE 0 END AS closes,event_time AS event_time FROM events WHERE event_type_id IN ('ddfb99e2-47be-480c-9438-73c5feef5ef3','51f07817-4758-4125-9924-958b42dab999','11dea560-a24f-4972-a4bb-d5bef9013cf4') ORDER BY event_time DESC,received_at DESC",
+  "dimensions": [
+    {
+      "name": "message_id",
+      "type": "string"
+    },
+    {
+      "name": "message_name",
+      "type": "string"
+    },
+    {
+      "name": "display_id",
+      "type": "string"
+    },
+    {
+      "name": "impressions",
+      "type": "number"
+    },
+    {
+      "name": "clicks",
+      "type": "number"
+    },
+    {
+      "name": "closes",
+      "type": "number"
+    },
+    {
+      "name": "event_time",
+      "type": "timestamp"
+    }
+  ]
+}

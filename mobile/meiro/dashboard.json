@@ -1,0 +1,246 @@
+{
+  "name": "DTR | 05 Mobile app • synthetic journeys & native in-app engagement",
+  "defaultDateRange": {
+    "kind": "preset",
+    "days": 30
+  },
+  "reports": [
+    {
+      "id": "ed7bc358-67f8-4ffb-844d-84730e8b8425",
+      "name": "App demo runs",
+      "attributeId": "dtr_mobile_outcomes",
+      "measures": [
+        {
+          "id": "fc2587f2-9bcd-4250-a302-b5cd4d52af21",
+          "label": "runs",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "runs"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "stage"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "7f533362-c201-4592-be2b-d0817a3fc2e8",
+      "name": "Net demo bookings",
+      "attributeId": "dtr_mobile_outcomes",
+      "measures": [
+        {
+          "id": "8aba00b8-6cea-4c1d-84a1-e4dbe6ef7ea0",
+          "label": "bookings",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "bookings"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "stage"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "7b13a954-097d-47a7-a86a-45bbe461db99",
+      "name": "Net demo booking value (€)",
+      "attributeId": "dtr_mobile_outcomes",
+      "measures": [
+        {
+          "id": "f284544a-51d0-47ad-abf0-6b76bf973788",
+          "label": "revenue",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "revenue"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "stage"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "d1ec7b6a-dec7-45df-848c-67dfe7702c0d",
+      "name": "Demo ancillary revenue (€)",
+      "attributeId": "dtr_mobile_outcomes",
+      "measures": [
+        {
+          "id": "5529c078-c5bd-475b-8f2b-dce87d9ded02",
+          "label": "ancillary",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "ancillary"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "stage"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "9afcd6fe-4e87-4abe-8cde-ebbde01aaaaf",
+      "name": "Check-ins prepared • simulated",
+      "attributeId": "dtr_mobile_outcomes",
+      "measures": [
+        {
+          "id": "d3c88fe7-bc57-41d8-a9a1-38962651aa07",
+          "label": "checkins",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "checkins"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "stage"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "6a6d78ee-9986-4388-8144-8ec4fa443378",
+      "name": "Mobile journey stages",
+      "attributeId": "dtr_mobile_outcomes",
+      "measures": [
+        {
+          "id": "e146446e-05e2-421b-865f-1fed7cc73216",
+          "label": "runs",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "runs"
+          }
+        },
+        {
+          "id": "ad3faa8d-ab2e-4cfa-aee6-402d9968c561",
+          "label": "bookings",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "bookings"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [
+        "stage"
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "stage"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "table",
+      "width": "standard",
+      "height": "standard"
+    },
+    {
+      "id": "073184f2-2de5-4a86-b1b3-9c25de77f033",
+      "name": "Native in-app engagement • SDK events only",
+      "attributeId": "dtr_mobile_in_app_activity",
+      "measures": [
+        {
+          "id": "981a1356-6f8c-4cf4-a2a1-b5bb7749df83",
+          "label": "impressions",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "impressions"
+          }
+        },
+        {
+          "id": "ac6d2943-382f-45fc-ab97-2a247fbe210a",
+          "label": "clicks",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "clicks"
+          }
+        },
+        {
+          "id": "ec8648a4-e67a-49f0-ad0f-60dee247177e",
+          "label": "closes",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "closes"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [
+        "message_name"
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "event_time",
+      "dashboardFilterDimensions": [
+        "message_name"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "table",
+      "width": "standard",
+      "height": "standard"
+    }
+  ]
+}

@@ -17,3 +17,11 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Preserve the DERTOUR logo, red/cream palette and existing typography. React owns personalized content; SDK DOM injection must use separate empty slots.
 - Native Meiro popup and inline examples are required alongside website-rendered lifecycle cards. Meiro owns their HTML, conditions, caps and triggers. Keep SDK-owned nodes inside empty anchors, reinitialize on route/consent changes, and do not duplicate native interaction events.
 - Adjacent homepage banners must have distinct visual hierarchy. Keep the native in-page banner compact and image-free to avoid repeating the lifecycle card’s hotel photograph and large split layout.
+
+## Native mobile companion (approved 2026-09-23)
+
+- Keep the native SwiftUI demo in `mobile/`, versioned with this repository. Run it locally in the iPhone simulator; no App Store deployment is requested.
+- Use the CTO-provided private Meiro iOS SDK `pipes` branch, pinned by commit. Never vendor its source or commit management API tokens. Keep reproducible SDK fixes under `mobile/patches/`.
+- Meiro owns native inline/modal HTML, audiences, triggers and caps. Do not substitute local SwiftUI banners or invent native engagement events.
+- Keep analytics consent separate from promotional offer permission. No IDFA. Local notification previews must be explicitly distinguished from remote Meiro/FCM delivery.
+- Mobile reports must use dedicated mobile event types and label synthetic booking values. Do not describe demo revenue as causal ROI/ROAS.

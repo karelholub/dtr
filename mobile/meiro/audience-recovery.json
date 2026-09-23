@@ -1,0 +1,32 @@
+{
+  "name": "DTR Mobile | recovery • synthetic demo",
+  "conditionTimeZone": "UTC",
+  "definition": {
+    "include": [
+      {
+        "conditions": [
+          {
+            "attributeId": "dtr_mobile_context",
+            "predicates": [
+              {
+                "dimension": "stage",
+                "operator": "has_any_of",
+                "value": [
+                  "checkout"
+                ]
+              },
+              {
+                "dimension": "marketing",
+                "operator": "has_any_of",
+                "value": [
+                  "true"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exclude": []
+  }
+}

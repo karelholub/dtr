@@ -1,0 +1,115 @@
+{
+  "verifiedAt": "2026-09-23",
+  "device": "iPhone 16 Pro / iOS 18.6 Simulator",
+  "sdkCommit": "e417c45bfdd5c84ce3e09545c8c1536e3b5165da",
+  "uiTests": {
+    "bookingAllInclusiveAndOfflinePersistence": "passed",
+    "declinedConsentAndNativeNavigation": "passed",
+    "nativeFeedbackModalAndDeepLink": "passed",
+    "nativeInlineClickAndLiveProfileRevision": "passed",
+    "nativeSavedBookingRecoveryAndCheckoutDeepLink": "passed"
+  },
+  "reporting": [
+    {
+      "report": "App demo runs",
+      "rows": [
+        [
+          19
+        ]
+      ],
+      "generatedAt": "2026-09-23T10:33:36.976Z"
+    },
+    {
+      "report": "Net demo bookings",
+      "rows": [
+        [
+          4
+        ]
+      ],
+      "generatedAt": "2026-09-23T10:33:37.420Z"
+    },
+    {
+      "report": "Net demo booking value (\u20ac)",
+      "rows": [
+        [
+          4732
+        ]
+      ],
+      "generatedAt": "2026-09-23T10:33:37.925Z"
+    },
+    {
+      "report": "Demo ancillary revenue (\u20ac)",
+      "rows": [
+        [
+          0
+        ]
+      ],
+      "generatedAt": "2026-09-23T10:33:38.340Z"
+    },
+    {
+      "report": "Check-ins prepared \u2022 simulated",
+      "rows": [
+        [
+          0
+        ]
+      ],
+      "generatedAt": "2026-09-23T10:33:38.864Z"
+    },
+    {
+      "report": "Mobile journey stages",
+      "rows": [
+        [
+          "booked",
+          2,
+          2
+        ],
+        [
+          "checkout",
+          3,
+          0
+        ],
+        [
+          "completed",
+          2,
+          2
+        ],
+        [
+          "inspiration",
+          12,
+          0
+        ]
+      ],
+      "generatedAt": "2026-09-23T10:33:39.266Z"
+    },
+    {
+      "report": "Native in-app engagement \u2022 SDK events only",
+      "rows": [
+        [
+          "DTR Mobile | Home inspiration \u00b7 inline",
+          3,
+          1,
+          0
+        ],
+        [
+          "DTR Mobile | Post-trip feedback \u00b7 modal",
+          2,
+          2,
+          0
+        ],
+        [
+          "DTR Mobile | Saved booking \u00b7 modal",
+          1,
+          1,
+          0
+        ]
+      ],
+      "generatedAt": "2026-09-23T10:33:39.620Z"
+    }
+  ],
+  "limitations": [
+    "Synthetic trips, prices and outcomes",
+    "Local notification preview; APNs/FCM not configured",
+    "iOS Simulator validated, no Android app delivered",
+    "Instance-wide in-app policy 20/hour; rollback recorded"
+  ]
+}

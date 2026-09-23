@@ -1,0 +1,25 @@
+{
+  "name": "DTR Mobile | feedback • synthetic demo",
+  "conditionTimeZone": "UTC",
+  "definition": {
+    "include": [
+      {
+        "conditions": [
+          {
+            "attributeId": "dtr_mobile_context",
+            "predicates": [
+              {
+                "dimension": "stage",
+                "operator": "has_any_of",
+                "value": [
+                  "completed"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exclude": []
+  }
+}

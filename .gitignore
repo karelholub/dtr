@@ -5,3 +5,6 @@ dist/
 .DS_Store
 test-results/
 playwright-report/
+mobile/.build/
+mobile/DerivedData/
+**/xcuserdata/

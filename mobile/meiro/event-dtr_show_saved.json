@@ -1,0 +1,46 @@
+{
+  "name": "dtr_show_saved",
+  "jsonSchema": {
+    "type": "object",
+    "required": [
+      "user_id",
+      "event_type",
+      "event_data"
+    ],
+    "properties": {
+      "user_id": {
+        "type": "string"
+      },
+      "event_type": {
+        "const": "event_custom"
+      },
+      "event_data": {
+        "type": "object",
+        "required": [
+          "name",
+          "synthetic",
+          "demo_site"
+        ],
+        "properties": {
+          "name": {
+            "const": "dtr_show_saved"
+          },
+          "synthetic": {
+            "const": true
+          },
+          "demo_site": {
+            "const": "dertour_mobile"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "additionalProperties": true
+  },
+  "identifierRules": [
+    {
+      "identifierTypeId": "85555d97-0a3d-409f-a68a-6055610898d0",
+      "rule": "$.user_id"
+    }
+  ]
+}

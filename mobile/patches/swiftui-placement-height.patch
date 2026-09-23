@@ -1,0 +1,37 @@
+diff --git a/Meiro/Sources/InAppMessaging/MeiroInAppMessageView.swift b/Meiro/Sources/InAppMessaging/MeiroInAppMessageView.swift
+index d4cee81..8a0bef0 100644
+--- a/Meiro/Sources/InAppMessaging/MeiroInAppMessageView.swift
++++ b/Meiro/Sources/InAppMessaging/MeiroInAppMessageView.swift
+@@ -12,0 +13 @@ public final class MeiroInAppMessageView: UIView {
++    internal var onHeightChanged: ((CGFloat) -> Void)?
+@@ -44 +45 @@ public final class MeiroInAppMessageView: UIView {
+-    internal func resize() { contentHeight.constant = content?.measuredHeight ?? 0; invalidateIntrinsicContentSize(); superview?.setNeedsLayout() }
++    internal func resize() { contentHeight.constant = content?.measuredHeight ?? 0; invalidateIntrinsicContentSize(); onHeightChanged?(contentHeight.constant); superview?.setNeedsLayout() }
+@@ -60,0 +62 @@ public final class MeiroInAppMessageView: UIView {
++
+@@ -65 +67 @@ public final class MeiroInAppMessageView: UIView {
+-public struct MeiroInAppMessage: UIViewRepresentable {
++public struct MeiroInAppMessage: View {
+@@ -67,0 +70 @@ public struct MeiroInAppMessage: UIViewRepresentable {
++    @State private var height: CGFloat = 0
+@@ -69,2 +72,18 @@ public struct MeiroInAppMessage: UIViewRepresentable {
+-    public func makeUIView(context: Context) -> MeiroInAppMessageView { MeiroInAppMessageView(placement: placement, messaging: messaging) }
+-    public func updateUIView(_ uiView: MeiroInAppMessageView, context: Context) {}
++    public var body: some View {
++        InAppPlacementAdapter(placement: placement, messaging: messaging, height: $height)
++            .frame(height: height)
++    }
++}
++
++private struct InAppPlacementAdapter: UIViewRepresentable {
++    let placement: String
++    let messaging: MeiroInAppMessaging?
++    @Binding var height: CGFloat
++    func makeUIView(context: Context) -> MeiroInAppMessageView {
++        let view = MeiroInAppMessageView(placement: placement, messaging: messaging)
++        view.onHeightChanged = { value in
++            DispatchQueue.main.async { if height != value { height = value } }
++        }
++        return view
++    }
++    func updateUIView(_ uiView: MeiroInAppMessageView, context: Context) {}

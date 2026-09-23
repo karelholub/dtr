@@ -1,0 +1,29 @@
+{
+  "name": "DTR Mobile | Saved booking · modal",
+  "sourceId": "c1030346-e94b-4a64-b4ca-12bf10774c63",
+  "format": "modal",
+  "isEnabled": true,
+  "contentHtml": "<!doctype html><html lang=\"de\"><head><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><style>*{box-sizing:border-box}html,body{margin:0;background:transparent;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#2b2421}.card{padding:28px;background:#fff;border-radius:16px;border-top:4px solid #dc0824}.eyebrow{font-size:10px;letter-spacing:1.5px;font-weight:700;color:#bd1120;margin:0 0 10px}h2{font-size:28px;line-height:1.12;letter-spacing:-.5px;margin:0 0 12px}p{font-size:15px;line-height:1.5;margin:0 0 18px}.cta{display:inline-block;background:#dc0824;color:#fff;padding:13px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:700}.note{font-size:11px;color:#74665e;margin-top:14px}</style></head><body><article class=\"card\"><p class=\"eyebrow\">DERTOUR · DEIN URLAUB WARTET</p><h2>Dein Wunschhotel ist vorgemerkt.</h2><p>Mach dort weiter, wo du aufgehört hast. Dein gespeichertes Angebot behält Zimmer, Verpflegung und Reisende bei.</p><a class=\"cta\" href=\"dertour-demo://resume\">Angebot fortsetzen →</a><p class=\"note\">Demo · keine echte Buchung oder Zahlung</p></article></body></html>",
+  "placement": null,
+  "priority": 8,
+  "conditions": {
+    "mode": "all",
+    "rules": [
+      {
+        "field": "audience",
+        "operator": "in",
+        "audienceId": "f4fffa30-3c7d-4e29-b53d-cd5ef8785ff7"
+      }
+    ]
+  },
+  "trigger": {
+    "type": "event",
+    "name": "dtr_booking_saved",
+    "delaySeconds": 2
+  },
+  "frequencyCap": {
+    "period": "session",
+    "limit": 3
+  },
+  "requiredProfileAttributes": []
+}

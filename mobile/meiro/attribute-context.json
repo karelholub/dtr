@@ -1,0 +1,63 @@
+{
+  "type": "realtime",
+  "name": "DTR mobile context",
+  "query": "SELECT payload->'event_data'->>'run_id' AS run_id,payload->'event_data'->>'revision' AS revision,payload->'event_data'->>'stage' AS stage,payload->'event_data'->>'destination' AS destination,payload->'event_data'->>'hotel_name' AS hotel_name,payload->'event_data'->>'hotel_id' AS hotel_id,payload->'event_data'->>'marketing' AS marketing,COALESCE((payload->'event_data'->>'net_booking')::numeric,0) AS net_booking,COALESCE((payload->'event_data'->>'net_value')::numeric,0) AS net_value,COALESCE((payload->'event_data'->>'ancillary_value')::numeric,0) AS ancillary_value,payload->'event_data'->>'checked_in' AS checked_in,payload->'event_data'->>'watch_active' AS watch_active,payload->'event_data'->>'service_case' AS service_case,event_time AS updated_at FROM events WHERE event_type_id='4572680a-c44c-4b72-86d2-1ddb61e76dd5' AND payload->'event_data'->>'demo_site'='dertour_mobile' ORDER BY event_time DESC,received_at DESC LIMIT 1",
+  "dimensions": [
+    {
+      "name": "run_id",
+      "type": "string"
+    },
+    {
+      "name": "revision",
+      "type": "string"
+    },
+    {
+      "name": "stage",
+      "type": "string"
+    },
+    {
+      "name": "destination",
+      "type": "string"
+    },
+    {
+      "name": "hotel_name",
+      "type": "string"
+    },
+    {
+      "name": "hotel_id",
+      "type": "string"
+    },
+    {
+      "name": "marketing",
+      "type": "string"
+    },
+    {
+      "name": "checked_in",
+      "type": "string"
+    },
+    {
+      "name": "watch_active",
+      "type": "string"
+    },
+    {
+      "name": "service_case",
+      "type": "string"
+    },
+    {
+      "name": "net_booking",
+      "type": "number"
+    },
+    {
+      "name": "net_value",
+      "type": "number"
+    },
+    {
+      "name": "ancillary_value",
+      "type": "number"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp"
+    }
+  ]
+}

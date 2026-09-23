@@ -1,0 +1,22 @@
+{
+  "id": "bdc4b209-9fd0-4cab-8068-1f82ea15527a",
+  "name": "DERTOUR mobile demo status",
+  "slug": "dertour-mobile-demo",
+  "identifierTypeIds": [
+    "85555d97-0a3d-409f-a68a-6055610898d0"
+  ],
+  "attributeIds": [
+    "dtr_mobile_context"
+  ],
+  "protectionMode": "unprotected",
+  "mode": "realtime",
+  "dwhConnectionId": null,
+  "managedBy": null,
+  "managedKind": null,
+  "version": 1,
+  "deletedAt": null,
+  "createdAt": "2026-09-23T09:44:02.280Z",
+  "updatedAt": "2026-09-23T09:44:02.280Z",
+  "keyPrefix": null,
+  "keyLastUsedAt": null
+}

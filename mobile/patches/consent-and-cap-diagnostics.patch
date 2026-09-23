@@ -1,0 +1,9 @@
+diff --git a/Meiro/Sources/InAppMessaging/MeiroInAppMessaging.swift b/Meiro/Sources/InAppMessaging/MeiroInAppMessaging.swift
+index 71c0227..ccf30c3 100644
+--- a/Meiro/Sources/InAppMessaging/MeiroInAppMessaging.swift
++++ b/Meiro/Sources/InAppMessaging/MeiroInAppMessaging.swift
+@@ -117 +117 @@ public final class MeiroInAppMessaging {
+-    if !enabled { cancelPending() }
++    if !enabled { reset() }
+@@ -475,0 +476 @@ public final class MeiroInAppMessaging {
++      self.diagnostic("Admission decision: \(decision ?? "unknown") reason: \(response["reason"] ?? "none")")

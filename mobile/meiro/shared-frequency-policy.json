@@ -1,0 +1,38 @@
+{
+  "scope": "Instance-wide in-app policy; presentation setting for this travel demo instance",
+  "before": {
+    "channel": "in_app",
+    "enabled": true,
+    "limit": 1,
+    "version": 1,
+    "window": {
+      "unit": "hour",
+      "value": 12
+    },
+    "lastChangedAt": "2026-09-10T21:02:23.491Z",
+    "lastChangedBy": {
+      "id": null,
+      "name": null,
+      "type": "system"
+    }
+  },
+  "after": {
+    "channel": "in_app",
+    "enabled": true,
+    "limit": 20,
+    "version": 2,
+    "window": {
+      "unit": "hour",
+      "value": 1
+    }
+  },
+  "rollback": {
+    "enabled": true,
+    "limit": 1,
+    "window": {
+      "unit": "hour",
+      "value": 12
+    },
+    "instruction": "PUT /api/frequency-caps/in_app with the current expectedVersion"
+  }
+}

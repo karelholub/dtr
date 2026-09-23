@@ -2,6 +2,10 @@
 
 Responsive German travel prototype based on the DERTOUR website, with a direct Meiro Web SDK integration. No Google Tag Manager. No real bookings or payments.
 
+## Native iPhone companion
+
+The SwiftUI app, private Meiro `pipes` SDK integration, simulator launcher, native in-app messages and mobile reporting definitions are in [mobile/](mobile/README.md).
+
 ## Run and build
 
 ```sh

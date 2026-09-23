@@ -1,0 +1,222 @@
+[
+  {
+    "id": "calimera-fido-gardens",
+    "name": "Calimera Fido Gardens",
+    "town": "Cala d’Or",
+    "destination": "Mallorca",
+    "price": 544,
+    "rating": 93,
+    "reviews": 3631,
+    "stars": 3,
+    "image": "c810b375c1762f9b.webp",
+    "gallery": [
+      "c810b375c1762f9b.webp",
+      "dcd7e417725a0a45.webp",
+      "47edb74394f4618c.webp"
+    ],
+    "amenities": [
+      "Familienfreundlich",
+      "Pool",
+      "WLAN",
+      "Animation"
+    ],
+    "family": true
+  },
+  {
+    "id": "sentido-fido-punta-del-mar",
+    "name": "Sentido Fido Punta del Mar",
+    "town": "Costa de la Calma",
+    "destination": "Mallorca",
+    "price": 530,
+    "rating": 97,
+    "reviews": 2198,
+    "stars": 4,
+    "image": "12ff4009052688dd.webp",
+    "gallery": [
+      "12ff4009052688dd.webp",
+      "adbe9c6d8cbf2b63.webp"
+    ],
+    "amenities": [
+      "Adults only",
+      "Wellness",
+      "Pool",
+      "Meerblick"
+    ],
+    "family": false
+  },
+  {
+    "id": "bahia-suites-camp-de-mar",
+    "name": "Bahía Suites Camp de Mar",
+    "town": "Camp de Mar",
+    "destination": "Mallorca",
+    "price": 542,
+    "rating": 98,
+    "reviews": 869,
+    "stars": 4,
+    "image": "e28ca4f2d53a539b.webp",
+    "gallery": [
+      "e28ca4f2d53a539b.webp",
+      "47edb74394f4618c.webp"
+    ],
+    "amenities": [
+      "Strandnähe",
+      "Pool",
+      "WLAN",
+      "Wellness"
+    ],
+    "family": true
+  },
+  {
+    "id": "ses-fotges",
+    "name": "Ses Fotges",
+    "town": "Platja de Muro",
+    "destination": "Mallorca",
+    "price": 547,
+    "rating": 92,
+    "reviews": 464,
+    "stars": 4,
+    "image": "47edb74394f4618c.webp",
+    "gallery": [
+      "47edb74394f4618c.webp"
+    ],
+    "amenities": [
+      "Familienfreundlich",
+      "Strandnähe",
+      "Pool",
+      "WLAN"
+    ],
+    "family": true
+  },
+  {
+    "id": "las-gaviotas-suites",
+    "name": "Las Gaviotas Suites",
+    "town": "Platja de Muro",
+    "destination": "Mallorca",
+    "price": 686,
+    "rating": 86,
+    "reviews": 1077,
+    "stars": 4,
+    "image": "adbe9c6d8cbf2b63.webp",
+    "gallery": [
+      "adbe9c6d8cbf2b63.webp",
+      "12ff4009052688dd.webp"
+    ],
+    "amenities": [
+      "Wellness",
+      "Pool",
+      "WLAN",
+      "Fitness"
+    ],
+    "family": false
+  },
+  {
+    "id": "aegean-beach-resort",
+    "name": "Aegean Beach Resort (Demo)",
+    "town": "Kreta",
+    "country": "Griechenland",
+    "destination": "Griechenland",
+    "price": 629,
+    "rating": 95,
+    "reviews": 248,
+    "stars": 4,
+    "image": "3d4604b485a11192.webp",
+    "gallery": [
+      "3d4604b485a11192.webp"
+    ],
+    "amenities": [
+      "Strandnähe",
+      "Pool",
+      "WLAN",
+      "Familienfreundlich"
+    ],
+    "family": true
+  },
+  {
+    "id": "lykia-coast-resort",
+    "name": "Lykia Coast Resort (Demo)",
+    "town": "Ölüdeniz",
+    "country": "Türkei",
+    "destination": "Türkei",
+    "price": 589,
+    "rating": 95,
+    "reviews": 248,
+    "stars": 4,
+    "image": "935c3d4659341fb3.webp",
+    "gallery": [
+      "935c3d4659341fb3.webp"
+    ],
+    "amenities": [
+      "Strandnähe",
+      "Pool",
+      "WLAN",
+      "Familienfreundlich"
+    ],
+    "family": true
+  },
+  {
+    "id": "red-sea-garden-resort",
+    "name": "Red Sea Garden Resort (Demo)",
+    "town": "Hurghada",
+    "country": "Ägypten",
+    "destination": "Ägypten",
+    "price": 649,
+    "rating": 95,
+    "reviews": 248,
+    "stars": 4,
+    "image": "ec754c2436112eab.webp",
+    "gallery": [
+      "ec754c2436112eab.webp"
+    ],
+    "amenities": [
+      "Strandnähe",
+      "Pool",
+      "WLAN",
+      "Familienfreundlich"
+    ],
+    "family": true
+  },
+  {
+    "id": "island-lagoon-resort",
+    "name": "Island Lagoon Resort (Demo)",
+    "town": "Nord-Malé-Atoll",
+    "country": "Malediven",
+    "destination": "Malediven",
+    "price": 1489,
+    "rating": 95,
+    "reviews": 248,
+    "stars": 4,
+    "image": "f3afb69022ed2947.webp",
+    "gallery": [
+      "f3afb69022ed2947.webp"
+    ],
+    "amenities": [
+      "Strandnähe",
+      "Pool",
+      "WLAN",
+      "Familienfreundlich"
+    ],
+    "family": true
+  },
+  {
+    "id": "caribe-palm-resort",
+    "name": "Caribe Palm Resort (Demo)",
+    "town": "Punta Cana",
+    "country": "Dominikanische Republik",
+    "destination": "Dominikanische Republik",
+    "price": 1199,
+    "rating": 95,
+    "reviews": 248,
+    "stars": 4,
+    "image": "6b87355b2447f962.webp",
+    "gallery": [
+      "6b87355b2447f962.webp"
+    ],
+    "amenities": [
+      "Strandnähe",
+      "Pool",
+      "WLAN",
+      "Familienfreundlich"
+    ],
+    "family": true
+  }
+]

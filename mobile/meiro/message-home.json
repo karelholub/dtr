@@ -1,0 +1,23 @@
+{
+  "name": "DTR Mobile | Home inspiration · inline",
+  "sourceId": "c1030346-e94b-4a64-b4ca-12bf10774c63",
+  "format": "inline",
+  "isEnabled": true,
+  "contentHtml": "<!doctype html><html lang=\"de\"><head><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><style>*{box-sizing:border-box}html,body{margin:0;background:transparent;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#2b2421}.card{padding:20px;background:#fff4e9;border-radius:16px;border-top:4px solid #dc0824}.eyebrow{font-size:10px;letter-spacing:1.5px;font-weight:700;color:#bd1120;margin:0 0 10px}h2{font-size:22px;line-height:1.12;letter-spacing:-.5px;margin:0 0 12px}p{font-size:15px;line-height:1.5;margin:0 0 18px}.cta{display:inline-block;background:#dc0824;color:#fff;padding:13px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:700}.note{font-size:11px;color:#74665e;margin-top:14px}</style></head><body><article class=\"card\"><p class=\"eyebrow\">DERTOUR · DEINE URLAUBSIDEEN</p><h2>Ein kleiner Tap. Ein großer Urlaub.</h2><p>Sonne, Meer und Zeit für dich: Entdecke Mallorca und merke dir dein Lieblingshotel.</p><a class=\"cta\" href=\"dertour-demo://hotel/calimera-fido-gardens\">Mallorca entdecken →</a><p class=\"note\">Demo · keine echte Buchung oder Zahlung</p></article></body></html>",
+  "placement": "dtr_home",
+  "priority": 5,
+  "conditions": {
+    "mode": "all",
+    "rules": []
+  },
+  "trigger": {
+    "type": "event",
+    "name": "dtr_show_home",
+    "delaySeconds": 0
+  },
+  "frequencyCap": {
+    "period": "session",
+    "limit": 10
+  },
+  "requiredProfileAttributes": []
+}

@@ -1,0 +1,10 @@
+diff --git a/Meiro/Sources/MeiroSDK.swift b/Meiro/Sources/MeiroSDK.swift
+index 2ec3750..9a9c6b9 100644
+--- a/Meiro/Sources/MeiroSDK.swift
++++ b/Meiro/Sources/MeiroSDK.swift
+@@ -60,0 +61,5 @@ public enum MeiroSDK {
++            // Consent may be granted after didBecomeActive was already delivered.
++            // Bootstrap messaging from the real current application state.
++            if UIApplication.shared.applicationState == .active {
++                DispatchQueue.main.async { impl.inAppMessaging?.foreground() }
++            }

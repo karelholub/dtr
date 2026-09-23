@@ -1,0 +1,32 @@
+{
+  "name": "DTR Mobile | price • synthetic demo",
+  "conditionTimeZone": "UTC",
+  "definition": {
+    "include": [
+      {
+        "conditions": [
+          {
+            "attributeId": "dtr_mobile_context",
+            "predicates": [
+              {
+                "dimension": "stage",
+                "operator": "has_any_of",
+                "value": [
+                  "price"
+                ]
+              },
+              {
+                "dimension": "marketing",
+                "operator": "has_any_of",
+                "value": [
+                  "true"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exclude": []
+  }
+}

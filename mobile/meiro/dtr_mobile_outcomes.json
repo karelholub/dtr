@@ -1,0 +1,47 @@
+{
+  "type": "realtime",
+  "name": "DTR mobile outcomes",
+  "query": "SELECT DISTINCT ON (payload->'event_data'->>'run_id') payload->'event_data'->>'run_id' AS run_id,payload->'event_data'->>'stage' AS stage,payload->'event_data'->>'destination' AS destination,1 AS runs,CASE WHEN payload->'event_data'->>'searched'='true' THEN 1 ELSE 0 END AS searches,COALESCE((payload->'event_data'->>'net_booking')::numeric,0) AS bookings,COALESCE((payload->'event_data'->>'net_value')::numeric,0) AS revenue,COALESCE((payload->'event_data'->>'ancillary_value')::numeric,0) AS ancillary,CASE WHEN payload->'event_data'->>'checked_in'='true' THEN 1 ELSE 0 END AS checkins,event_time AS updated_at FROM events WHERE event_type_id='4572680a-c44c-4b72-86d2-1ddb61e76dd5' ORDER BY payload->'event_data'->>'run_id',event_time DESC,received_at DESC",
+  "dimensions": [
+    {
+      "name": "run_id",
+      "type": "string"
+    },
+    {
+      "name": "stage",
+      "type": "string"
+    },
+    {
+      "name": "destination",
+      "type": "string"
+    },
+    {
+      "name": "runs",
+      "type": "number"
+    },
+    {
+      "name": "searches",
+      "type": "number"
+    },
+    {
+      "name": "bookings",
+      "type": "number"
+    },
+    {
+      "name": "revenue",
+      "type": "number"
+    },
+    {
+      "name": "ancillary",
+      "type": "number"
+    },
+    {
+      "name": "checkins",
+      "type": "number"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp"
+    }
+  ]
+}
