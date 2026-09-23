@@ -36,3 +36,7 @@ Four Playwright tests pass across desktop and mobile: consent rejection/acceptan
 P3: small icon and copy variations, reduced promotion inventory and simplified auxiliary pages. The scope is a faithful travel demonstration, not a production booking engine or full catalogue replica. No real payment, account login, reservation or newsletter delivery exists. Complete accessibility certification and production backend integration are outside this demo's scope.
 
 Checklist: responsive visual comparison complete; original assets local; core flow tested; consent and event validation checked; build ready; deployment left to owner.
+
+## Booking-control regression fix
+
+Reproduced the reported `removeChild` DOMException by replacing room-button text nodes with browser-translation-style font wrappers, then selecting All Inclusive on the other room. The original UI went blank. Stable label/icon elements now avoid removing externally replaced text nodes; explicit meal-plan option values keep state independent of translated labels. The same regression passes on desktop and mobile, verifies both room switches, expected totals, and checkout continuity. All six browser tests and the production build pass after this fix.

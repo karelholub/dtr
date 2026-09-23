@@ -1148,9 +1148,13 @@ export function App() {
                                 setBoard(e.target.value);
                               }}
                             >
-                              <option>Halbpension</option>
-                              <option>Halbpension Plus</option>
-                              <option>All Inclusive</option>
+                              <option value="Halbpension">Halbpension</option>
+                              <option value="Halbpension Plus">
+                                Halbpension Plus
+                              </option>
+                              <option value="All Inclusive">
+                                All Inclusive
+                              </option>
                             </select>
                           </label>
                           <button
@@ -1173,14 +1177,14 @@ export function App() {
                               });
                             }}
                           >
-                            {room === r ? (
-                              <>
-                                <Icon name="check" size={18} />
-                                Ausgewählt
-                              </>
-                            ) : (
-                              "Zimmer wählen"
-                            )}
+                            {/* Keep labels in stable elements: browser translation
+                                can replace bare text nodes outside React's control. */}
+                            <span hidden={room !== r}>
+                              <Icon name="check" size={18} />
+                            </span>
+                            <span>
+                              {room === r ? "Ausgewählt" : "Zimmer wählen"}
+                            </span>
                           </button>
                         </div>
                       ),
