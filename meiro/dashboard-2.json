@@ -1,0 +1,292 @@
+{
+  "name": "DTR | 02 Lifecycle & suppression • synthetic demo",
+  "defaultDateRange": {
+    "days": 30,
+    "kind": "preset"
+  },
+  "reports": [
+    {
+      "id": "c9991de6-ac3d-48c3-b88b-b59555293a4d",
+      "name": "Repeat bookings",
+      "limit": 50,
+      "width": "standard",
+      "height": "compact",
+      "groupBy": [],
+      "measures": [
+        {
+          "id": "b1bcb225-b67f-453c-9ead-47b223144a47",
+          "label": "Repeat bookings before cancellations",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "repeat_booking"
+          }
+        }
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "attributeId": "dtr_run_outcomes",
+      "rateColumns": [],
+      "visualization": "metric",
+      "dateRangeDimension": "updated_at",
+      "includeMissingGroups": false,
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ]
+    },
+    {
+      "id": "a249b6ab-93a3-4920-9d3b-abb2bd858b34",
+      "name": "Ancillary revenue (€)",
+      "limit": 50,
+      "width": "standard",
+      "height": "compact",
+      "groupBy": [],
+      "measures": [
+        {
+          "id": "669ccd61-f19c-447a-be91-609badd7adb3",
+          "label": "Net ancillary value",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "ancillary_value"
+          }
+        }
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "attributeId": "dtr_run_outcomes",
+      "rateColumns": [],
+      "visualization": "metric",
+      "dateRangeDimension": "updated_at",
+      "includeMissingGroups": false,
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ]
+    },
+    {
+      "id": "b013c0cb-ff30-41e6-a5fa-b31c997be401",
+      "name": "Ancillary contribution (€) • demo assumptions",
+      "limit": 50,
+      "width": "standard",
+      "height": "compact",
+      "groupBy": [],
+      "measures": [
+        {
+          "id": "874be3e5-e82e-4726-a10e-09159cb82924",
+          "label": "Illustrative ancillary margin",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "ancillary_margin"
+          }
+        }
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "attributeId": "dtr_run_outcomes",
+      "rateColumns": [],
+      "visualization": "metric",
+      "dateRangeDimension": "updated_at",
+      "includeMissingGroups": false,
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ]
+    },
+    {
+      "id": "d875624f-ddce-4ea3-87a3-55ae92e44acd",
+      "name": "Cancelled trips",
+      "limit": 50,
+      "width": "standard",
+      "height": "compact",
+      "groupBy": [],
+      "measures": [
+        {
+          "id": "fb13cb10-6583-43ca-8f12-ec1f5a170111",
+          "label": "Cancelled runs",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "cancelled"
+          }
+        }
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "attributeId": "dtr_run_outcomes",
+      "rateColumns": [],
+      "visualization": "metric",
+      "dateRangeDimension": "updated_at",
+      "includeMissingGroups": false,
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ]
+    },
+    {
+      "id": "ff7e933c-4dd3-47a0-98bc-903cb2d7f4b2",
+      "name": "Open service cases",
+      "limit": 50,
+      "width": "standard",
+      "height": "compact",
+      "groupBy": [],
+      "measures": [
+        {
+          "id": "86de3f35-d451-41b3-95f6-02f3fbd3c8ac",
+          "label": "Runs with service cases",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "service_case"
+          }
+        }
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "attributeId": "dtr_run_outcomes",
+      "rateColumns": [],
+      "visualization": "metric",
+      "dateRangeDimension": "updated_at",
+      "includeMissingGroups": false,
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ]
+    },
+    {
+      "id": "2216cf64-23f4-422e-989c-6e9f0b60f579",
+      "name": "Acquisition exclusions • not spend saved",
+      "limit": 50,
+      "width": "standard",
+      "height": "compact",
+      "groupBy": [],
+      "measures": [
+        {
+          "id": "4abe4886-cea4-4811-aa49-aa1a13b45d12",
+          "label": "Booked / completed / cancelled runs",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "acquisition_excluded"
+          }
+        }
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "attributeId": "dtr_run_outcomes",
+      "rateColumns": [],
+      "visualization": "metric",
+      "dateRangeDimension": "updated_at",
+      "includeMissingGroups": false,
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ]
+    },
+    {
+      "id": "04918de4-e35c-412e-b00d-2a3dc203794b",
+      "name": "Lifecycle by traveler scenario",
+      "limit": 50,
+      "width": "standard",
+      "height": "standard",
+      "groupBy": [
+        "persona"
+      ],
+      "measures": [
+        {
+          "id": "e8dfe9e7-07a7-4211-bd2f-abbd4ae68a83",
+          "label": "Net bookings",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "net_booking"
+          }
+        },
+        {
+          "id": "f2b70181-5669-4324-a1e9-f88e08baca4e",
+          "label": "Repeat bookings",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "repeat_booking"
+          }
+        },
+        {
+          "id": "84e5e179-3ec3-4551-93a9-fc352a6e20fc",
+          "label": "Service cases",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "service_case"
+          }
+        }
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "attributeId": "dtr_run_outcomes",
+      "rateColumns": [],
+      "visualization": "table",
+      "dateRangeDimension": "updated_at",
+      "includeMissingGroups": false,
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ]
+    },
+    {
+      "id": "697c593b-3f1f-4d45-bf60-058c2ae2d9ef",
+      "name": "Website exposures & email previews • no sends",
+      "attributeId": "dtr_touchpoints",
+      "measures": [
+        {
+          "id": "d6f829b4-40d7-407f-88b8-f1e0a47ae6d7",
+          "label": "impressions",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "impressions"
+          }
+        },
+        {
+          "id": "f78ee4dc-0501-4037-be3c-7e69791d875c",
+          "label": "clicks",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "clicks"
+          }
+        },
+        {
+          "id": "7bf76a77-8f76-4764-a0bc-e0578fe6cad4",
+          "label": "previews",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "previews"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [
+        "decision"
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "event_time",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "table",
+      "width": "standard",
+      "height": "standard"
+    }
+  ]
+}

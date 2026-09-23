@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "externalId": "calimera-fido-gardens",
+      "status": "active",
+      "data": {
+        "name": "Calimera Fido Gardens",
+        "destination": "Mallorca",
+        "price": 544,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/c810b375c1762f9b.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/calimera-fido-gardens"
+      }
+    },
+    {
+      "externalId": "sentido-fido-punta-del-mar",
+      "status": "active",
+      "data": {
+        "name": "Sentido Fido Punta del Mar",
+        "destination": "Mallorca",
+        "price": 530,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/12ff4009052688dd.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/sentido-fido-punta-del-mar"
+      }
+    },
+    {
+      "externalId": "bahia-suites-camp-de-mar",
+      "status": "active",
+      "data": {
+        "name": "Bahía Suites Camp de Mar",
+        "destination": "Mallorca",
+        "price": 542,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/e28ca4f2d53a539b.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/bahia-suites-camp-de-mar"
+      }
+    },
+    {
+      "externalId": "ses-fotges",
+      "status": "active",
+      "data": {
+        "name": "Ses Fotges",
+        "destination": "Mallorca",
+        "price": 547,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/47edb74394f4618c.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/ses-fotges"
+      }
+    },
+    {
+      "externalId": "las-gaviotas-suites",
+      "status": "active",
+      "data": {
+        "name": "Las Gaviotas Suites",
+        "destination": "Mallorca",
+        "price": 686,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/adbe9c6d8cbf2b63.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/las-gaviotas-suites"
+      }
+    },
+    {
+      "externalId": "aegean-beach-resort",
+      "status": "active",
+      "data": {
+        "name": "Aegean Beach Resort (Demo)",
+        "destination": "Griechenland",
+        "price": 629,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/3d4604b485a11192.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/aegean-beach-resort"
+      }
+    },
+    {
+      "externalId": "lykia-coast-resort",
+      "status": "active",
+      "data": {
+        "name": "Lykia Coast Resort (Demo)",
+        "destination": "Türkei",
+        "price": 589,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/935c3d4659341fb3.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/lykia-coast-resort"
+      }
+    },
+    {
+      "externalId": "red-sea-garden-resort",
+      "status": "active",
+      "data": {
+        "name": "Red Sea Garden Resort (Demo)",
+        "destination": "Ägypten",
+        "price": 649,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/ec754c2436112eab.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/red-sea-garden-resort"
+      }
+    },
+    {
+      "externalId": "island-lagoon-resort",
+      "status": "active",
+      "data": {
+        "name": "Island Lagoon Resort (Demo)",
+        "destination": "Malediven",
+        "price": 1489,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/f3afb69022ed2947.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/island-lagoon-resort"
+      }
+    },
+    {
+      "externalId": "caribe-palm-resort",
+      "status": "active",
+      "data": {
+        "name": "Caribe Palm Resort (Demo)",
+        "destination": "Dominikanische Republik",
+        "price": 1199,
+        "currency": "EUR",
+        "image_url": "https://dtrdemo.netlify.app/assets/6b87355b2447f962.webp",
+        "url": "https://dtrdemo.netlify.app/hotel/caribe-palm-resort"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "DTR offer context",
+  "type": "realtime",
+  "query": "WITH latest AS (SELECT payload FROM events WHERE event_type_id='e0ba0d5d-bc36-46a9-855e-dcb3697e5ca8' AND payload->>'demo_site'='dertour' AND payload->>'synthetic'='true' ORDER BY event_time DESC,received_at DESC LIMIT 1) SELECT ci.data_json->>'name' AS hotel,ci.data_json->>'destination' AS destination,ci.data_json->>'image_url' AS image_url,ci.data_json->>'url' AS url,(ci.data_json->>'price')::numeric AS reference_price,COALESCE((l.payload->>'watch_price')::numeric,0) AS watch_price FROM latest l JOIN catalogs c ON c.id='6c7e4704-2ed0-4bde-9c09-719d15f24a9f' JOIN catalog_items ci ON ci.catalog_id=c.id AND ci.status='active' WHERE ci.external_id=COALESCE(l.payload->'trip'->>'hotel_id',l.payload->>'watch_hotel_id') OR ci.data_json->>'destination'=l.payload->>'destination' ORDER BY CASE WHEN ci.external_id=COALESCE(l.payload->'trip'->>'hotel_id',l.payload->>'watch_hotel_id') THEN 0 ELSE 1 END,ci.external_id LIMIT 1",
+  "dimensions": [
+    {
+      "name": "hotel",
+      "type": "string"
+    },
+    {
+      "name": "destination",
+      "type": "string"
+    },
+    {
+      "name": "image_url",
+      "type": "string"
+    },
+    {
+      "name": "url",
+      "type": "string"
+    },
+    {
+      "name": "reference_price",
+      "type": "number"
+    },
+    {
+      "name": "watch_price",
+      "type": "number"
+    }
+  ]
+}

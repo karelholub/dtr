@@ -1,0 +1,53 @@
+{
+  "definitionJson": {
+    "name": "DTR | recovery lifecycle • PREVIEW ONLY",
+    "description": "Resume a current saved quote after 30 demo minutes. Booking, cancellation, expiry and permission changes remove eligibility. PREVIEW ONLY. No launch or real recipients configured.",
+    "tags": [
+      "DERTOUR",
+      "synthetic",
+      "preview-only"
+    ]
+  },
+  "graphJson": {
+    "nodes": [
+      {
+        "id": "entry-recovery",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 100
+        },
+        "data": {
+          "audienceId": "3959c82f-46f2-46f3-8a14-bcea4c73785a",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-recovery",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 100
+        },
+        "data": {
+          "campaignId": "f1bbdd7e-6313-40fe-8ebf-685161b1f0f6"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-recovery",
+        "source": "entry-recovery",
+        "target": "email-recovery",
+        "sourceHandle": "next"
+      }
+    ]
+  },
+  "settingsJson": {}
+}

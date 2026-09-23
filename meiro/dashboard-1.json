@@ -1,0 +1,254 @@
+{
+  "name": "DTR | 01 Booking funnel • synthetic demo",
+  "reports": [
+    {
+      "id": "21cad09f-badb-412e-8467-94ca714aaf52",
+      "name": "Demo runs",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "3bef29aa-bf32-436e-96ae-422c9afe31b9",
+          "label": "Synthetic runs",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "eligible_run"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "9bb30283-ae64-4d3f-897e-6042d7e8113c",
+      "name": "Searches",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "cb336a01-1e44-4721-8161-85cfeacbabf1",
+          "label": "Runs with a search",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "searched"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "3cccad55-ee5f-4a8f-9333-8157d22d7b78",
+      "name": "Checkout started",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "7fc0b53c-08ce-4fa4-89c6-2d37c3e52dfe",
+          "label": "Runs with checkout",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "checkout_started"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "7b329d66-a2c9-4965-9d13-ce0aad70be60",
+      "name": "Net confirmed bookings",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "56aca512-85d5-4a5d-b9d1-369a970b8f15",
+          "label": "Net bookings",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "net_booking"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "896c22ab-43f3-4617-afc8-4a444f325f07",
+      "name": "Checkout → confirmed booking",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "e89b2943-5a0a-4995-9838-c426f8143f31",
+          "label": "net_booking",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "net_booking"
+          }
+        },
+        {
+          "id": "5f381b6c-44cd-4c92-be6d-a17796953291",
+          "label": "checkout_started",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "checkout_started"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "rate",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "0c518571-c39b-4bc9-a429-c9f40b86ba34",
+      "name": "Journey stages",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "13cb3c5d-59fd-4b40-87b5-68fdadd9ddf6",
+          "label": "Runs",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "eligible_run"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [
+        "stage"
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "bar",
+      "width": "standard",
+      "height": "standard"
+    },
+    {
+      "id": "c56b16a5-663d-475c-953d-602c88856941",
+      "name": "Destination performance",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "a99299d0-e01a-4bd2-8b40-030a810b40a6",
+          "label": "Searches",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "searched"
+          }
+        },
+        {
+          "id": "74714d79-a799-4ea8-b698-7db50cca0e19",
+          "label": "Checkouts",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "checkout_started"
+          }
+        },
+        {
+          "id": "42971af3-e61e-4be1-a760-0aabae8d8de5",
+          "label": "Net bookings",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "net_booking"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [
+        "destination"
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "table",
+      "width": "standard",
+      "height": "standard"
+    }
+  ],
+  "defaultDateRange": {
+    "kind": "preset",
+    "days": 30
+  }
+}

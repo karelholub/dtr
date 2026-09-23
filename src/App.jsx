@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useLifecycle } from "./demo/useLifecycle";
+import { Personalization, PriceWatch, TripHub, Presenter } from "./demo/Demo";
+import { newQuote, priceFor, offerKey } from "./demo/model";
 import { asset, destinations, hotels, collections, brands } from "./data";
 import {
   track,
@@ -163,6 +166,7 @@ function Modal({ title, children, onClose, wide = false }) {
   );
 }
 export function App() {
+  const demo = useLifecycle();
   const params = new URLSearchParams(
     location.search || sessionStorage.getItem("dtr-trip") || "",
   );
@@ -237,12 +241,32 @@ export function App() {
     1,
     Math.round((new Date(end) - new Date(start)) / 86400000),
   );
-  const pp =
+  const referencePP =
     hotel.price +
     (board === "All Inclusive" ? 177 : board === "Halbpension Plus" ? 51 : 0) +
     (room === "Doppelzimmer Superior" ? 30 : 0) -
     (travelType === "Nur Hotel" ? 176 : 0);
-  const total = pp * (adults + children * 0.65);
+  const referenceTotal =
+    Math.round(referencePP * (adults + children * 0.65) * 100) / 100;
+  const tripSelection = {
+    destination,
+    departure,
+    start,
+    end,
+    adults,
+    children,
+    travelType,
+    board,
+    room,
+  };
+  const watch = demo.state.watch;
+  const total =
+    watch?.active &&
+    watch.offer_key === offerKey(hotel, tripSelection) &&
+    new Date(watch.expires_at) > new Date(demo.state.clock)
+      ? watch.current_price
+      : referenceTotal;
+  const pp = total / (adults + children * 0.65);
   function go(path) {
     history.pushState({}, "", path);
     setRoute(path.split("?")[0]);
@@ -290,6 +314,7 @@ export function App() {
   }, [notice]);
   function search(dest = destination) {
     setDestination(dest);
+    demo.act("search", { destination: dest });
     track("search", {
       search_term: dest,
       destination: dest,
@@ -325,6 +350,7 @@ export function App() {
     setConsent(granted);
     setConsentState(granted ? "granted" : "denied");
     setCookieOpen(false);
+    demo.act("analytics_consent");
     if (granted) track("page_view", { page_path: route });
   }
   function openHotel(h) {
@@ -337,7 +363,28 @@ export function App() {
     go("/hotel/" + h.id);
   }
   function checkout() {
+    const quote = newQuote(
+      hotel,
+      {
+        destination,
+        departure,
+        start,
+        end,
+        adults,
+        children,
+        travelType,
+        board,
+        room,
+      },
+      demo.state,
+    );
+    quote.total = total;
+    demo.act("checkout", { quote });
     track("begin_checkout", {
+      quote_id: quote.id,
+      booking_session_id: quote.id,
+      room,
+      board,
       currency: "EUR",
       value: total,
       items: [item(hotel, total)],
@@ -542,7 +589,7 @@ export function App() {
                   Merkzettel{saved.length ? ` (${saved.length})` : ""}
                 </span>
               </button>
-              <button onClick={() => setModal("account")}>
+              <button onClick={() => go("/meine-reise")}>
                 <Icon name="user" size={18} />
                 <span>Mein DERTOUR</span>
               </button>
@@ -596,6 +643,7 @@ export function App() {
         </strong>
       </button>
       <main>
+        {route === "/meine-reise" && <TripHub demo={demo} search={search} />}
         {route === "/" && (
           <>
             <div className="hero">
@@ -641,6 +689,7 @@ export function App() {
                 <img src={asset("fb76ed410ea4ea97.svg")} alt="REWE Group" />
               </span>
             </div>
+            <Personalization demo={demo} go={go} search={search} />
             <div className="container" id="inspiration">
               {collections.map((c, i) => (
                 <section className="collection" key={c.title}>
@@ -1122,6 +1171,12 @@ export function App() {
                         <Icon name="edit" size={16} />
                       </button>
                     </div>
+                    <PriceWatch
+                      demo={demo}
+                      hotel={hotel}
+                      total={total}
+                      trip={tripSelection}
+                    />
                     <h2>Wähle dein Zimmer</h2>
                     {["Doppelzimmer Standard", "Doppelzimmer Superior"].map(
                       (r) => (
@@ -1356,9 +1411,27 @@ export function App() {
                 }}
                 onSubmit={(e) => {
                   e.preventDefault();
+                  const savedQuote = demo.state.quote;
+                  if (
+                    savedQuote &&
+                    (new Date(savedQuote.expires_at) <
+                      new Date(demo.state.clock) ||
+                      savedQuote.hotel_id !== hotel.id ||
+                      Math.abs(savedQuote.total - total) > 0.01)
+                  ) {
+                    setNotice(
+                      "Dein gespeichertes Angebot hat sich geändert oder ist abgelaufen. Bitte wähle deine Reise erneut.",
+                    );
+                    return;
+                  }
                   const order = {
                     id: "DTR-DEMO-" + Date.now().toString(36).toUpperCase(),
                     hotel: hotel.name,
+                    hotel_id: hotel.id,
+                    destination,
+                    departure,
+                    travelType,
+                    quote_id: demo.state.quote?.id || null,
                     total,
                     start,
                     end,
@@ -1367,6 +1440,7 @@ export function App() {
                     room,
                     board,
                   };
+                  demo.act("purchase", { booking: order, value: total });
                   track("form_submit", { form_id: "demo_booking" });
                   track("purchase", {
                     transaction_id: order.id,
@@ -1375,6 +1449,14 @@ export function App() {
                     value: total,
                     items: [item(hotel, total)],
                     booking_type: "simulated",
+                    quote_id: order.quote_id,
+                    destination,
+                    start_date: start,
+                    end_date: end,
+                    room,
+                    board,
+                    adults,
+                    children,
                   });
                   sessionStorage.setItem("dtr-booking", JSON.stringify(order));
                   setBooking(order);
@@ -1487,6 +1569,7 @@ export function App() {
           </div>
         )}
         {!["/", "/angebote", "/merkzettel", "/bestaetigung"].includes(route) &&
+          !["/meine-reise", "/demo"].includes(route) &&
           !route.startsWith("/hotel/") &&
           !route.startsWith("/buchung/") && (
             <div className="empty">
@@ -1497,6 +1580,7 @@ export function App() {
             </div>
           )}
       </main>
+      <Presenter demo={demo} go={go} />
       {route.startsWith("/hotel/") && (
         <button
           className="mobile-offer-bar"

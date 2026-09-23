@@ -1,0 +1,88 @@
+{
+  "definitionJson": {
+    "name": "DTR | pretrip lifecycle • PREVIEW ONLY",
+    "description": "Service and eligible ancillary recommendations remain separate. No transfer upsell after ownership. PREVIEW ONLY. No launch or real recipients configured.",
+    "tags": [
+      "DERTOUR",
+      "synthetic",
+      "preview-only"
+    ]
+  },
+  "graphJson": {
+    "nodes": [
+      {
+        "id": "entry-service",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 100
+        },
+        "data": {
+          "audienceId": "ce20de37-592f-4598-b1e1-6a04e5a1f6a4",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-service",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 100
+        },
+        "data": {
+          "campaignId": "546358a8-492b-40aa-9454-fbb9cbcc9ad1"
+        }
+      },
+      {
+        "id": "entry-pretrip",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 360
+        },
+        "data": {
+          "audienceId": "933c108f-f27b-4e17-a0c5-a1a512b0f632",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-pretrip",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 360
+        },
+        "data": {
+          "campaignId": "1be290a5-cd6a-4801-9ab0-c7574778bd58"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-service",
+        "source": "entry-service",
+        "target": "email-service",
+        "sourceHandle": "next"
+      },
+      {
+        "id": "edge-pretrip",
+        "source": "entry-pretrip",
+        "target": "email-pretrip",
+        "sourceHandle": "next"
+      }
+    ]
+  },
+  "settingsJson": {}
+}

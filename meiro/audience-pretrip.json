@@ -1,0 +1,37 @@
+{
+  "name": "DTR | pretrip • synthetic demo",
+  "conditionTimeZone": "UTC",
+  "definition": {
+    "include": [
+      {
+        "conditions": [
+          {
+            "predicates": [
+              {
+                "value": [
+                  "pretrip"
+                ],
+                "operator": "has_any_of",
+                "dimension": "decision"
+              }
+            ],
+            "attributeId": "dtr_decision"
+          },
+          {
+            "attributeId": "dtr_message_eligibility",
+            "predicates": [
+              {
+                "dimension": "eligible",
+                "operator": "has_any_of",
+                "value": [
+                  1
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exclude": []
+  }
+}

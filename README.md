@@ -60,3 +60,11 @@ Automated tests use a stubbed SDK and do not send analytics to the live instance
 ## Reference assets
 
 Original public DERTOUR brand assets and fonts are stored locally; no production-site hotlinks or GTM are included. Image files were resized and converted to WebP for transfer size. Source URLs are listed in [asset provenance](docs/asset-provenance.json). Brand and image rights remain with their respective owners. This repository is a demonstration prototype, not an official DERTOUR service.
+
+### Meiro lifecycle demonstration
+
+Open `/demo` or **Meiro · Demo Studio** for the complete website/email-preview story. Live personalization requires analytics consent and a current Meiro Profile API response. Configuration defaults point at the travel instance; no administrative token is needed in the frontend.
+
+[Presentation runbook](docs/demo-runbook.md) · [Meiro object manifest](meiro/manifest.json) · [Aggregate validation](meiro/validation.json)
+
+Includes six lifecycle modules, three native Meiro reporting dashboards, synthetic personas/clock, exact quote recovery, price watches, a trip hub, German email previews and an explicitly illustrative ROI model. Real sends, ad exports, live inventory and predictive models are not enabled.

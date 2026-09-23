@@ -1,0 +1,95 @@
+{
+  "source": "0e72295b-cf85-41be-b46c-e48194e24779",
+  "eventType": "e0ba0d5d-bc36-46a9-855e-dcb3697e5ca8",
+  "attributes": {
+    "DTR decision": "dtr_decision",
+    "DTR run outcomes": "dtr_run_outcomes",
+    "DTR trip details": "dtr_trip_details",
+    "DTR message eligibility": "dtr_message_eligibility",
+    "DTR touchpoints": "dtr_touchpoints",
+    "DTR offer context": "dtr_offer_context"
+  },
+  "profileEndpoint": "0c0d29a5-72b7-4952-8000-e256bb66c8c5",
+  "dashboards": [
+    {
+      "id": "76b25b9b-5e1f-40b5-8757-e1177a843ae5",
+      "name": "DTR | 01 Booking funnel • synthetic demo",
+      "reports": [
+        "21cad09f-badb-412e-8467-94ca714aaf52",
+        "9bb30283-ae64-4d3f-897e-6042d7e8113c",
+        "3cccad55-ee5f-4a8f-9333-8157d22d7b78",
+        "7b329d66-a2c9-4965-9d13-ce0aad70be60",
+        "896c22ab-43f3-4617-afc8-4a444f325f07",
+        "0c518571-c39b-4bc9-a429-c9f40b86ba34",
+        "c56b16a5-663d-475c-953d-602c88856941"
+      ]
+    },
+    {
+      "id": "28b5054b-270c-41b6-868b-14df2b62a7c0",
+      "name": "DTR | 02 Lifecycle & suppression • synthetic demo",
+      "reports": [
+        "c9991de6-ac3d-48c3-b88b-b59555293a4d",
+        "a249b6ab-93a3-4920-9d3b-abb2bd858b34",
+        "b013c0cb-ff30-41e6-a5fa-b31c997be401",
+        "d875624f-ddce-4ea3-87a3-55ae92e44acd",
+        "ff7e933c-4dd3-47a0-98bc-903cb2d7f4b2",
+        "2216cf64-23f4-422e-989c-6e9f0b60f579",
+        "04918de4-e35c-412e-b00d-2a3dc203794b",
+        "697c593b-3f1f-4d45-bf60-058c2ae2d9ef"
+      ]
+    },
+    {
+      "id": "192ae19d-89ec-4408-8278-d69d04173226",
+      "name": "DTR | 03 Commercial value • illustrative margin, no ad spend",
+      "reports": [
+        "b75ce980-f11c-4322-a38c-9444e617273f",
+        "9d97223b-5ba1-4372-8198-2d491ed02513",
+        "39f00db5-4e14-45cf-9e78-df9c10ecbfd7",
+        "691a7e53-6ce4-460f-9e02-6171084c010c"
+      ]
+    }
+  ],
+  "audiences": {
+    "research": "8305e0bb-09e3-4e9b-a748-0a54a505d6dd",
+    "recovery": "3959c82f-46f2-46f3-8a14-bcea4c73785a",
+    "price": "22006244-e4c6-461c-996f-c19d0bcb0b4d",
+    "pretrip": "933c108f-f27b-4e17-a0c5-a1a512b0f632",
+    "service": "ce20de37-592f-4598-b1e1-6a04e5a1f6a4",
+    "feedback": "0e87df57-a4c8-4ec7-a701-daebc66df84a",
+    "rebook": "1faad166-f45e-4a52-a48a-7257daaa3404",
+    "vip": "e5fed1ba-cb78-47ef-96df-dbfc027a0d08",
+    "winback": "d5713f58-0300-413f-8eba-6a236e985b17",
+    "care": "19185491-7801-4cfa-83bd-cf580e816331",
+    "cancelled": "1b95b632-7b18-4d86-bfcf-ef317bb4bd5b",
+    "control": "1b29a9f2-875a-4cd8-be3e-ec73d3fe04c5",
+    "acquisition_excluded": "7503b418-f49d-4502-a683-59e207cc22ee"
+  },
+  "campaigns": {
+    "research": "1281b3ec-46d7-48ad-a009-2a502821c471",
+    "recovery": "f1bbdd7e-6313-40fe-8ebf-685161b1f0f6",
+    "price": "5fae8a30-3fab-4c2a-885a-c0db40e83f22",
+    "pretrip": "1be290a5-cd6a-4801-9ab0-c7574778bd58",
+    "service": "546358a8-492b-40aa-9454-fbb9cbcc9ad1",
+    "feedback": "facaff25-ccef-4c97-8ba8-cf2ff934766b",
+    "rebook": "29880cae-8f29-455c-8a6d-9c9470a6502f",
+    "vip": "5d9a4170-8410-4ab4-9620-73e2a4b64cc9",
+    "winback": "984a3c57-2185-47bc-8e9d-a98a36d78e26",
+    "care": "f4d1ca75-7477-4702-bc7a-54bd099562d7",
+    "cancelled": "382559eb-7df6-4e82-a1c8-353e363e4aa4"
+  },
+  "journeys": {
+    "research": "1ec79330-661b-44cf-937e-604f5d9a84ef",
+    "recovery": "025f19c4-9c3d-4a0f-bfc6-898aeb371f4e",
+    "price": "a0e33d76-ef4e-4ec4-b219-0113ac92d480",
+    "pretrip": "e7f8ecb5-188f-404f-9461-2be214d28176",
+    "feedback": "c5bd9517-907d-4e37-b0d8-f38488d94c57",
+    "vip": "30835dfd-9452-498d-b705-8848e678fd78"
+  },
+  "goals": {
+    "booking": "3ed4bc33-9188-4649-b8b9-3710b41e12e1",
+    "ancillary": "8a139ac7-e095-46dd-a0ad-d7acc83bcbb3",
+    "feedback": "4ffc7922-b310-4522-9538-f3919720acf5"
+  },
+  "catalog": "6c7e4704-2ed0-4bde-9c09-719d15f24a9f",
+  "touchpointEvent": "8f54a2b5-2a6b-4834-85fe-c4fa1d77da48"
+}

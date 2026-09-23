@@ -1,0 +1,25 @@
+{
+  "name": "DTR | acquisition_excluded • synthetic demo",
+  "conditionTimeZone": "UTC",
+  "definition": {
+    "include": [
+      {
+        "conditions": [
+          {
+            "attributeId": "dtr_decision",
+            "predicates": [
+              {
+                "dimension": "media_eligibility",
+                "operator": "has_any_of",
+                "value": [
+                  "acquisition_excluded"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exclude": []
+  }
+}

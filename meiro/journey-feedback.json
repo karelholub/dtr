@@ -1,0 +1,123 @@
+{
+  "definitionJson": {
+    "name": "DTR | feedback lifecycle • PREVIEW ONLY",
+    "description": "Completed travel then feedback; open cases take service priority. PREVIEW ONLY. No launch or real recipients configured.",
+    "tags": [
+      "DERTOUR",
+      "synthetic",
+      "preview-only"
+    ]
+  },
+  "graphJson": {
+    "nodes": [
+      {
+        "id": "entry-feedback",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 100
+        },
+        "data": {
+          "audienceId": "0e87df57-a4c8-4ec7-a701-daebc66df84a",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-feedback",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 100
+        },
+        "data": {
+          "campaignId": "facaff25-ccef-4c97-8ba8-cf2ff934766b"
+        }
+      },
+      {
+        "id": "entry-rebook",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 360
+        },
+        "data": {
+          "audienceId": "1faad166-f45e-4a52-a48a-7257daaa3404",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-rebook",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 360
+        },
+        "data": {
+          "campaignId": "29880cae-8f29-455c-8a6d-9c9470a6502f"
+        }
+      },
+      {
+        "id": "entry-care",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 620
+        },
+        "data": {
+          "audienceId": "19185491-7801-4cfa-83bd-cf580e816331",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-care",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 620
+        },
+        "data": {
+          "campaignId": "f4d1ca75-7477-4702-bc7a-54bd099562d7"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-feedback",
+        "source": "entry-feedback",
+        "target": "email-feedback",
+        "sourceHandle": "next"
+      },
+      {
+        "id": "edge-rebook",
+        "source": "entry-rebook",
+        "target": "email-rebook",
+        "sourceHandle": "next"
+      },
+      {
+        "id": "edge-care",
+        "source": "entry-care",
+        "target": "email-care",
+        "sourceHandle": "next"
+      }
+    ]
+  },
+  "settingsJson": {}
+}

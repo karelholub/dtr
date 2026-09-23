@@ -26,3 +26,13 @@ The installed SDK strictly validates page_view and form_submit. Their arguments 
 Names and email entered into forms are never sent or persisted. Do not add them when extending the demo. No payment/passport data is requested. Consent rejection blocks SDK loading; withdrawal blocks new app event calls and updates SDK persistence consent; re-acceptance restores consent. Events before consent are not replayed.
 
 No downstream advertising pipes or campaigns were changed. Receipt in the input is separate from CDP attributes and activation setup.
+
+## DERTOUR lifecycle extension
+
+`dtr_demo_state` is a synthetic-only snapshot event with `demo_site: dertour`, a random run ID, revision, producer event time, lifecycle action, experiment arm, separate marketing/media permissions, quote/booking/watch context, owned extras, contact-step keys and outcome values. Meiro derives decisions and eligibility from the inputs; a client-provided decision is not used. Events are ordered by producer time then receipt time to withstand batching.
+
+`dtr_touchpoint` records a live web impression/click or eligible email preview with event ID, run ID, decision, channel, experiment and destination. Gallery previews do not count as communication. This is not an email-delivered/open event.
+
+`begin_checkout` now includes stable quote/booking-session IDs plus room and board. `purchase` includes quote, dates, party and booked selection; no checkout form names/emails are collected. A synthetic confirmation/cancellation updates Meiro run outcomes. Repeated state snapshots are deduplicated per run for reporting.
+
+See [demo-runbook.md](demo-runbook.md) and `meiro/manifest.json` for implementation details and limits.

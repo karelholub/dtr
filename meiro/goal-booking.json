@@ -1,0 +1,22 @@
+{
+  "name": "DTR | booking • synthetic event goal",
+  "description": "Demo activity only. Booking counts are gross event conversions; use DTR run-outcome dashboards for deduplicated cancellation-adjusted value. Not causal attribution.",
+  "countingMode": "every_event",
+  "currencyCode": "EUR",
+  "criteria": {
+    "matchers": [
+      {
+        "eventTypeId": "e0ba0d5d-bc36-46a9-855e-dcb3697e5ca8",
+        "filters": [
+          {
+            "path": "$.action",
+            "type": "string",
+            "operator": "equals",
+            "value": "purchase"
+          }
+        ],
+        "valuePath": "$.booked_value"
+      }
+    ]
+  }
+}

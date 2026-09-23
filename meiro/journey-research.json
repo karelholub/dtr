@@ -1,0 +1,53 @@
+{
+  "definitionJson": {
+    "name": "DTR | research lifecycle • PREVIEW ONLY",
+    "description": "Search recovery and destination inspiration. Two-hour demo-clock delay is computed by DTR decision. PREVIEW ONLY. No launch or real recipients configured.",
+    "tags": [
+      "DERTOUR",
+      "synthetic",
+      "preview-only"
+    ]
+  },
+  "graphJson": {
+    "nodes": [
+      {
+        "id": "entry-research",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 100
+        },
+        "data": {
+          "audienceId": "8305e0bb-09e3-4e9b-a748-0a54a505d6dd",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-research",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 100
+        },
+        "data": {
+          "campaignId": "1281b3ec-46d7-48ad-a009-2a502821c471"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-research",
+        "source": "entry-research",
+        "target": "email-research",
+        "sourceHandle": "next"
+      }
+    ]
+  },
+  "settingsJson": {}
+}

@@ -1,0 +1,83 @@
+{
+  "type": "realtime",
+  "name": "DTR run outcomes",
+  "query": "WITH runs AS (SELECT DISTINCT ON (payload->>'run_id') payload,event_time,received_at FROM events WHERE event_type_id='e0ba0d5d-bc36-46a9-855e-dcb3697e5ca8' AND payload->>'demo_site'='dertour' AND payload->>'synthetic'='true' ORDER BY payload->>'run_id',event_time DESC, received_at DESC) SELECT payload->>'run_id' AS run_id,payload->>'persona' AS persona,payload->>'experiment' AS experiment,payload->>'stage' AS stage,payload->>'destination' AS destination, COALESCE((payload->>'searched')::numeric,0) AS searched,COALESCE((payload->>'checkout_started')::numeric,0) AS checkout_started,COALESCE((payload->>'confirmed')::numeric,0) AS confirmed,COALESCE((payload->>'net_booking')::numeric,0) AS net_booking,COALESCE((payload->>'repeat_booking')::numeric,0) AS repeat_booking,COALESCE((payload->>'net_value')::numeric,0) AS net_value,COALESCE((payload->>'ancillary_value')::numeric,0) AS ancillary_value,COALESCE((payload->>'ancillary_margin')::numeric,0) AS ancillary_margin, 1 AS eligible_run, CASE WHEN payload->>'stage'='cancelled' THEN 1 ELSE 0 END AS cancelled, CASE WHEN payload->>'complaint'='true' THEN 1 ELSE 0 END AS service_case, CASE WHEN payload->>'stage' IN ('booked','completed','cancelled') THEN 1 ELSE 0 END AS acquisition_excluded, COALESCE((payload->>'net_value')::numeric,0)*0.12 + CASE WHEN payload->>'stage'='cancelled' THEN 0 ELSE COALESCE((payload->>'ancillary_margin')::numeric,0) END AS illustrative_contribution, event_time AS updated_at FROM runs",
+  "dimensions": [
+    {
+      "name": "run_id",
+      "type": "string"
+    },
+    {
+      "name": "persona",
+      "type": "string"
+    },
+    {
+      "name": "experiment",
+      "type": "string"
+    },
+    {
+      "name": "stage",
+      "type": "string"
+    },
+    {
+      "name": "destination",
+      "type": "string"
+    },
+    {
+      "name": "searched",
+      "type": "number"
+    },
+    {
+      "name": "checkout_started",
+      "type": "number"
+    },
+    {
+      "name": "confirmed",
+      "type": "number"
+    },
+    {
+      "name": "net_booking",
+      "type": "number"
+    },
+    {
+      "name": "repeat_booking",
+      "type": "number"
+    },
+    {
+      "name": "net_value",
+      "type": "number"
+    },
+    {
+      "name": "ancillary_value",
+      "type": "number"
+    },
+    {
+      "name": "ancillary_margin",
+      "type": "number"
+    },
+    {
+      "name": "eligible_run",
+      "type": "number"
+    },
+    {
+      "name": "cancelled",
+      "type": "number"
+    },
+    {
+      "name": "service_case",
+      "type": "number"
+    },
+    {
+      "name": "acquisition_excluded",
+      "type": "number"
+    },
+    {
+      "name": "illustrative_contribution",
+      "type": "number"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp"
+    }
+  ]
+}

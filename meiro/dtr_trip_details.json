@@ -1,0 +1,55 @@
+{
+  "type": "realtime",
+  "name": "DTR trip details",
+  "query": "SELECT payload->'trip'->>'hotel' AS hotel,payload->'trip'->>'hotel_id' AS hotel_id,payload->'trip'->>'destination' AS destination,payload->'trip'->>'start' AS start,payload->'trip'->>'end' AS end,payload->'trip'->>'room' AS room,payload->'trip'->>'board' AS board,payload->'trip'->>'departure' AS departure,payload->'trip'->>'travelType' AS traveltype, (payload->'trip'->>'adults')::numeric AS adults,(payload->'trip'->>'children')::numeric AS children,(payload->'trip'->>'total')::numeric AS total FROM events WHERE event_type_id='e0ba0d5d-bc36-46a9-855e-dcb3697e5ca8' AND payload->>'demo_site'='dertour' AND payload->>'synthetic'='true' ORDER BY received_at DESC LIMIT 1",
+  "dimensions": [
+    {
+      "name": "hotel",
+      "type": "string"
+    },
+    {
+      "name": "hotel_id",
+      "type": "string"
+    },
+    {
+      "name": "destination",
+      "type": "string"
+    },
+    {
+      "name": "start",
+      "type": "string"
+    },
+    {
+      "name": "end",
+      "type": "string"
+    },
+    {
+      "name": "room",
+      "type": "string"
+    },
+    {
+      "name": "board",
+      "type": "string"
+    },
+    {
+      "name": "departure",
+      "type": "string"
+    },
+    {
+      "name": "traveltype",
+      "type": "string"
+    },
+    {
+      "name": "adults",
+      "type": "number"
+    },
+    {
+      "name": "children",
+      "type": "number"
+    },
+    {
+      "name": "total",
+      "type": "number"
+    }
+  ]
+}

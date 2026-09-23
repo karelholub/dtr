@@ -1,0 +1,53 @@
+{
+  "definitionJson": {
+    "name": "DTR | price lifecycle • PREVIEW ONLY",
+    "description": "Explicit current-price watch at or below threshold. Stops after expiry, cancellation or booking. PREVIEW ONLY. No launch or real recipients configured.",
+    "tags": [
+      "DERTOUR",
+      "synthetic",
+      "preview-only"
+    ]
+  },
+  "graphJson": {
+    "nodes": [
+      {
+        "id": "entry-price",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 100
+        },
+        "data": {
+          "audienceId": "22006244-e4c6-461c-996f-c19d0bcb0b4d",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-price",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 100
+        },
+        "data": {
+          "campaignId": "5fae8a30-3fab-4c2a-885a-c0db40e83f22"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-price",
+        "source": "entry-price",
+        "target": "email-price",
+        "sourceHandle": "next"
+      }
+    ]
+  },
+  "settingsJson": {}
+}

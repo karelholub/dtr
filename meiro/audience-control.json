@@ -1,0 +1,25 @@
+{
+  "name": "DTR | control • synthetic demo",
+  "conditionTimeZone": "UTC",
+  "definition": {
+    "include": [
+      {
+        "conditions": [
+          {
+            "attributeId": "dtr_decision",
+            "predicates": [
+              {
+                "dimension": "decision",
+                "operator": "has_any_of",
+                "value": [
+                  "control"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exclude": []
+  }
+}

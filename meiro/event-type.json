@@ -1,0 +1,42 @@
+{
+  "id": "e0ba0d5d-bc36-46a9-855e-dcb3697e5ca8",
+  "name": "dtr_demo_state",
+  "jsonSchema": {
+    "type": "object",
+    "required": [
+      "run_id",
+      "synthetic",
+      "demo_site",
+      "action"
+    ],
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "run_id": {
+        "type": "string"
+      },
+      "demo_site": {
+        "const": "dertour"
+      },
+      "synthetic": {
+        "const": true
+      }
+    },
+    "additionalProperties": true
+  },
+  "retentionDays": 365,
+  "version": 1,
+  "identifierRules": [
+    {
+      "id": "669d6018-7c5f-4e8d-bc3a-bef05ddae55d",
+      "identifierTypeId": "c1db940f-4379-41f6-be24-db1a521a5e43",
+      "identifierTypeName": "user_id",
+      "rule": "$.user_id"
+    }
+  ],
+  "origin": "user",
+  "isCustomized": false,
+  "retentionEditable": true,
+  "createdAt": "2026-09-23T08:05:27.983Z"
+}

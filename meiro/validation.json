@@ -1,0 +1,981 @@
+{
+  "checkedAt": "2026-09-23T08:45:45.698Z",
+  "dashboards": [
+    {
+      "id": "76b25b9b-5e1f-40b5-8757-e1177a843ae5",
+      "name": "DTR | 01 Booking funnel • synthetic demo",
+      "reports": [
+        {
+          "name": "Demo runs",
+          "rows": [
+            [
+              28
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Searches",
+          "rows": [
+            [
+              25
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Checkout started",
+          "rows": [
+            [
+              17
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Net confirmed bookings",
+          "rows": [
+            [
+              9
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Checkout → confirmed booking",
+          "rows": [
+            [
+              9,
+              17
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Journey stages",
+          "rows": [
+            [
+              "booked",
+              6
+            ],
+            [
+              "cancelled",
+              4
+            ],
+            [
+              "checkout",
+              4
+            ],
+            [
+              "completed",
+              3
+            ],
+            [
+              "new",
+              3
+            ],
+            [
+              "research",
+              8
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Destination performance",
+          "rows": [
+            [
+              "Dominikanische Republik",
+              2,
+              0,
+              0
+            ],
+            [
+              "Griechenland",
+              2,
+              2,
+              2
+            ],
+            [
+              "Malediven",
+              2,
+              2,
+              0
+            ],
+            [
+              "Mallorca",
+              15,
+              9,
+              5
+            ],
+            [
+              "Türkei",
+              2,
+              2,
+              2
+            ],
+            [
+              "Ägypten",
+              2,
+              2,
+              0
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "28b5054b-270c-41b6-868b-14df2b62a7c0",
+      "name": "DTR | 02 Lifecycle & suppression • synthetic demo",
+      "reports": [
+        {
+          "name": "Repeat bookings",
+          "rows": [
+            [
+              4
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Ancillary revenue (€)",
+          "rows": [
+            [
+              158
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Ancillary contribution (€) • demo assumptions",
+          "rows": [
+            [
+              48
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Cancelled trips",
+          "rows": [
+            [
+              4
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Open service cases",
+          "rows": [
+            [
+              1
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Acquisition exclusions • not spend saved",
+          "rows": [
+            [
+              13
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Lifecycle by traveler scenario",
+          "rows": [
+            [
+              "booked",
+              1,
+              0,
+              0
+            ],
+            [
+              "cancelled",
+              0,
+              0,
+              0
+            ],
+            [
+              "care",
+              1,
+              0,
+              1
+            ],
+            [
+              "completed",
+              1,
+              0,
+              0
+            ],
+            [
+              "control",
+              0,
+              0,
+              0
+            ],
+            [
+              "lapsed",
+              0,
+              0,
+              0
+            ],
+            [
+              "leadership-showcase",
+              6,
+              4,
+              0
+            ],
+            [
+              "price",
+              0,
+              0,
+              0
+            ],
+            [
+              "recovery",
+              0,
+              0,
+              0
+            ],
+            [
+              "research",
+              0,
+              0,
+              0
+            ],
+            [
+              "researcher",
+              0,
+              0,
+              0
+            ],
+            [
+              "vip",
+              0,
+              0,
+              0
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Website exposures & email previews • no sends",
+          "rows": [
+            [
+              "recovery",
+              2,
+              0,
+              1
+            ],
+            [
+              "research",
+              2,
+              0,
+              0
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "192ae19d-89ec-4408-8278-d69d04173226",
+      "name": "DTR | 03 Commercial value • illustrative margin, no ad spend",
+      "reports": [
+        {
+          "name": "Net booking revenue (€) • synthetic",
+          "rows": [
+            [
+              15187.9
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Contribution (€) • assumed 12% + demo ancillary margin",
+          "rows": [
+            [
+              1870.548
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Treatment vs control • synthetic runs, not causal proof",
+          "rows": [
+            [
+              "control",
+              4,
+              2,
+              3818.95
+            ],
+            [
+              "treatment",
+              24,
+              7,
+              11368.95
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        },
+        {
+          "name": "Value by destination",
+          "rows": [
+            [
+              "Dominikanische Republik",
+              0,
+              0,
+              0
+            ],
+            [
+              "Griechenland",
+              3224,
+              0,
+              386.88
+            ],
+            [
+              "Malediven",
+              0,
+              0,
+              0
+            ],
+            [
+              "Mallorca",
+              8899.9,
+              158,
+              1115.988
+            ],
+            [
+              "Türkei",
+              3064,
+              0,
+              367.68
+            ],
+            [
+              "Ägypten",
+              0,
+              0,
+              0
+            ]
+          ],
+          "warnings": [],
+          "error": null
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "name": "research",
+      "status": "draft",
+      "validation": {}
+    },
+    {
+      "name": "recovery",
+      "status": "draft",
+      "validation": {}
+    },
+    {
+      "name": "price",
+      "status": "draft",
+      "validation": {}
+    },
+    {
+      "name": "pretrip",
+      "status": "draft",
+      "validation": {}
+    },
+    {
+      "name": "feedback",
+      "status": "draft",
+      "validation": {}
+    },
+    {
+      "name": "vip",
+      "status": "draft",
+      "validation": {}
+    }
+  ],
+  "goals": [
+    {
+      "name": "booking",
+      "report": {
+        "status": "available",
+        "range": {
+          "preset": "30d",
+          "startDate": "2026-08-25",
+          "endDate": "2026-09-23"
+        },
+        "selectedRange": {
+          "convertingProfiles": 1,
+          "conversions": 1,
+          "value": 1442
+        },
+        "lifetime": {
+          "convertingProfiles": 1,
+          "conversions": 1,
+          "value": 1442
+        },
+        "dailyTrend": [
+          {
+            "date": "2026-08-25",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-26",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-27",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-28",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-29",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-30",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-31",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-01",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-02",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-03",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-04",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-05",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-06",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-07",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-08",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-09",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-10",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-11",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-12",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-13",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-14",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-15",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-16",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-17",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-18",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-19",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-20",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-21",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-22",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-23",
+            "conversions": 1,
+            "value": 1442
+          }
+        ],
+        "topConverters": [
+          {
+            "profileId": "00ba6034-1e76-42cf-1712-54fc86f8dee8",
+            "identifiers": [
+              {
+                "typeId": "c1db940f-4379-41f6-be24-db1a521a5e43",
+                "value": "31f68b55-0f71-41f5-9f90-5375a6143fba"
+              },
+              {
+                "typeId": "56705c5b-cdde-4c69-84df-65c69ed41c94",
+                "value": "31f68b55-0f71-41f5-9f90-5375a6143fba"
+              }
+            ],
+            "conversions": 1,
+            "value": 1442,
+            "lastConversionAt": "2026-09-23T08:35:28.236Z"
+          }
+        ],
+        "dataNote": "Daily trends use each profile's latest 100 non-zero UTC days for this Goal."
+      }
+    },
+    {
+      "name": "ancillary",
+      "report": {
+        "status": "available",
+        "range": {
+          "preset": "30d",
+          "startDate": "2026-08-25",
+          "endDate": "2026-09-23"
+        },
+        "selectedRange": {
+          "convertingProfiles": 1,
+          "conversions": 1,
+          "value": 79
+        },
+        "lifetime": {
+          "convertingProfiles": 1,
+          "conversions": 1,
+          "value": 79
+        },
+        "dailyTrend": [
+          {
+            "date": "2026-08-25",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-26",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-27",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-28",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-29",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-30",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-31",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-01",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-02",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-03",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-04",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-05",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-06",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-07",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-08",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-09",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-10",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-11",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-12",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-13",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-14",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-15",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-16",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-17",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-18",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-19",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-20",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-21",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-22",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-23",
+            "conversions": 1,
+            "value": 79
+          }
+        ],
+        "topConverters": [
+          {
+            "profileId": "00ba6034-1e76-42cf-1712-54fc86f8dee8",
+            "identifiers": [
+              {
+                "typeId": "c1db940f-4379-41f6-be24-db1a521a5e43",
+                "value": "31f68b55-0f71-41f5-9f90-5375a6143fba"
+              },
+              {
+                "typeId": "56705c5b-cdde-4c69-84df-65c69ed41c94",
+                "value": "31f68b55-0f71-41f5-9f90-5375a6143fba"
+              }
+            ],
+            "conversions": 1,
+            "value": 79,
+            "lastConversionAt": "2026-09-23T08:35:35.412Z"
+          }
+        ],
+        "dataNote": "Daily trends use each profile's latest 100 non-zero UTC days for this Goal."
+      }
+    },
+    {
+      "name": "feedback",
+      "report": {
+        "status": "available",
+        "range": {
+          "preset": "30d",
+          "startDate": "2026-08-25",
+          "endDate": "2026-09-23"
+        },
+        "selectedRange": {
+          "convertingProfiles": 0,
+          "conversions": 0,
+          "value": 0
+        },
+        "lifetime": {
+          "convertingProfiles": 0,
+          "conversions": 0,
+          "value": 0
+        },
+        "dailyTrend": [
+          {
+            "date": "2026-08-25",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-26",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-27",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-28",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-29",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-30",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-08-31",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-01",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-02",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-03",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-04",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-05",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-06",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-07",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-08",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-09",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-10",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-11",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-12",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-13",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-14",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-15",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-16",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-17",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-18",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-19",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-20",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-21",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-22",
+            "conversions": 0,
+            "value": 0
+          },
+          {
+            "date": "2026-09-23",
+            "conversions": 0,
+            "value": 0
+          }
+        ],
+        "topConverters": [],
+        "dataNote": "Daily trends use each profile's latest 100 non-zero UTC days for this Goal."
+      }
+    }
+  ]
+}

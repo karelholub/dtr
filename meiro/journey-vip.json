@@ -1,0 +1,88 @@
+{
+  "definitionJson": {
+    "name": "DTR | vip lifecycle • PREVIEW ONLY",
+    "description": "VIP recognition and win-back use source-scoped synthetic travel history. PREVIEW ONLY. No launch or real recipients configured.",
+    "tags": [
+      "DERTOUR",
+      "synthetic",
+      "preview-only"
+    ]
+  },
+  "graphJson": {
+    "nodes": [
+      {
+        "id": "entry-vip",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 100
+        },
+        "data": {
+          "audienceId": "e5fed1ba-cb78-47ef-96df-dbfc027a0d08",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-vip",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 100
+        },
+        "data": {
+          "campaignId": "5d9a4170-8410-4ab4-9620-73e2a4b64cc9"
+        }
+      },
+      {
+        "id": "entry-winback",
+        "type": "scheduled_audience_trigger",
+        "position": {
+          "x": 100,
+          "y": 360
+        },
+        "data": {
+          "audienceId": "d5713f58-0300-413f-8eba-6a236e985b17",
+          "schedule": {
+            "type": "interval",
+            "intervalMinutes": 5
+          },
+          "reentryMode": "allow_reentry",
+          "cooldown": "P1D",
+          "maxConcurrentInstancesPerSubject": 1
+        }
+      },
+      {
+        "id": "email-winback",
+        "type": "email_campaign_send",
+        "position": {
+          "x": 550,
+          "y": 360
+        },
+        "data": {
+          "campaignId": "984a3c57-2185-47bc-8e9d-a98a36d78e26"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-vip",
+        "source": "entry-vip",
+        "target": "email-vip",
+        "sourceHandle": "next"
+      },
+      {
+        "id": "edge-winback",
+        "source": "entry-winback",
+        "target": "email-winback",
+        "sourceHandle": "next"
+      }
+    ]
+  },
+  "settingsJson": {}
+}

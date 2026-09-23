@@ -1,0 +1,51 @@
+{
+  "type": "realtime",
+  "name": "DTR touchpoints",
+  "query": "SELECT DISTINCT ON (payload->>'event_id') payload->>'event_id' AS event_id,payload->>'run_id' AS run_id,payload->>'decision' AS decision,payload->>'channel' AS channel,payload->>'action' AS action,payload->>'experiment' AS experiment,payload->>'destination' AS destination,CASE WHEN payload->>'action'='impression' THEN 1 ELSE 0 END AS impressions,CASE WHEN payload->>'action'='click' THEN 1 ELSE 0 END AS clicks,CASE WHEN payload->>'action'='preview' THEN 1 ELSE 0 END AS previews,event_time AS event_time FROM events WHERE event_type_id='8f54a2b5-2a6b-4834-85fe-c4fa1d77da48' AND payload->>'demo_site'='dertour' AND payload->>'synthetic'='true' ORDER BY payload->>'event_id',event_time DESC, received_at DESC",
+  "dimensions": [
+    {
+      "name": "event_id",
+      "type": "string"
+    },
+    {
+      "name": "run_id",
+      "type": "string"
+    },
+    {
+      "name": "decision",
+      "type": "string"
+    },
+    {
+      "name": "channel",
+      "type": "string"
+    },
+    {
+      "name": "action",
+      "type": "string"
+    },
+    {
+      "name": "experiment",
+      "type": "string"
+    },
+    {
+      "name": "destination",
+      "type": "string"
+    },
+    {
+      "name": "impressions",
+      "type": "number"
+    },
+    {
+      "name": "clicks",
+      "type": "number"
+    },
+    {
+      "name": "previews",
+      "type": "number"
+    },
+    {
+      "name": "event_time",
+      "type": "timestamp"
+    }
+  ]
+}

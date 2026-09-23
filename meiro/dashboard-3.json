@@ -1,0 +1,176 @@
+{
+  "name": "DTR | 03 Commercial value • illustrative margin, no ad spend",
+  "reports": [
+    {
+      "id": "b75ce980-f11c-4322-a38c-9444e617273f",
+      "name": "Net booking revenue (€) • synthetic",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "efa39f6a-7a94-40c5-b136-a5c758fd541c",
+          "label": "Net booking value",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "net_value"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "9d97223b-5ba1-4372-8198-2d491ed02513",
+      "name": "Contribution (€) • assumed 12% + demo ancillary margin",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "45a31df0-d471-4105-82a6-224b97b9f3ac",
+          "label": "Illustrative contribution, not actual profit",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "illustrative_contribution"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "39f00db5-4e14-45cf-9e78-df9c10ecbfd7",
+      "name": "Treatment vs control • synthetic runs, not causal proof",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "0e55cec5-3b77-4c53-a0db-27190c8564dc",
+          "label": "Demo runs",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "eligible_run"
+          }
+        },
+        {
+          "id": "d0e8543a-f540-47e4-a350-4cb67fecc36f",
+          "label": "Net bookings",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "net_booking"
+          }
+        },
+        {
+          "id": "76246bcd-8cd0-4238-8c80-fe264935c99d",
+          "label": "Net booking value (€)",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "net_value"
+          }
+        }
+      ],
+      "rateColumns": [
+        {
+          "id": "44844920-9346-4e88-8ba8-49d5db5c7a92",
+          "label": "Booking rate",
+          "numeratorMeasureId": "d0e8543a-f540-47e4-a350-4cb67fecc36f",
+          "denominatorMeasureId": "0e55cec5-3b77-4c53-a0db-27190c8564dc"
+        }
+      ],
+      "groupBy": [
+        "experiment"
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "table",
+      "width": "standard",
+      "height": "standard"
+    },
+    {
+      "id": "691a7e53-6ce4-460f-9e02-6171084c010c",
+      "name": "Value by destination",
+      "attributeId": "dtr_run_outcomes",
+      "measures": [
+        {
+          "id": "8b813dc3-39e3-4d09-877a-504498d5ac26",
+          "label": "Net booking value (€)",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "net_value"
+          }
+        },
+        {
+          "id": "75ef2aa0-9cc0-4d64-88f2-abfdca5b2fbc",
+          "label": "Ancillary value (€)",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "ancillary_value"
+          }
+        },
+        {
+          "id": "e81db6d1-6186-4982-a61a-032084e52244",
+          "label": "Illustrative contribution (€)",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "illustrative_contribution"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [
+        "destination"
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "updated_at",
+      "dashboardFilterDimensions": [
+        "destination",
+        "experiment",
+        "persona"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "table",
+      "width": "standard",
+      "height": "standard"
+    }
+  ],
+  "defaultDateRange": {
+    "kind": "preset",
+    "days": 30
+  }
+}
