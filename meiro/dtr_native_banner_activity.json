@@ -1,0 +1,39 @@
+{
+  "type": "realtime",
+  "name": "DTR native banner activity",
+  "query": "SELECT payload->>'banner_id' AS banner_id,payload->>'banner_name' AS banner_name,payload->>'banner_type' AS banner_type,payload->>'host' AS host,CASE WHEN event_type_id='c5b97f1d-55ee-4a95-8521-0ef34db3d339' THEN 1 ELSE 0 END AS impressions,CASE WHEN event_type_id='3a7590d0-83ca-4a1b-9309-0a40fb612fa0' THEN 1 ELSE 0 END AS clicks,CASE WHEN event_type_id='031358ff-3d5a-4a63-ad73-d7dcfd31e2bc' THEN 1 ELSE 0 END AS closes,event_time AS event_time FROM events WHERE event_type_id IN ('c5b97f1d-55ee-4a95-8521-0ef34db3d339','3a7590d0-83ca-4a1b-9309-0a40fb612fa0','031358ff-3d5a-4a63-ad73-d7dcfd31e2bc') AND payload->>'banner_id' IN ('b356eb89-d31e-45c2-80e1-ef187bd109cc','d454c38c-3df1-4fac-be6b-2735fdae78ff') ORDER BY event_time DESC,received_at DESC",
+  "dimensions": [
+    {
+      "name": "banner_id",
+      "type": "string"
+    },
+    {
+      "name": "banner_name",
+      "type": "string"
+    },
+    {
+      "name": "banner_type",
+      "type": "string"
+    },
+    {
+      "name": "host",
+      "type": "string"
+    },
+    {
+      "name": "impressions",
+      "type": "number"
+    },
+    {
+      "name": "clicks",
+      "type": "number"
+    },
+    {
+      "name": "closes",
+      "type": "number"
+    },
+    {
+      "name": "event_time",
+      "type": "timestamp"
+    }
+  ]
+}

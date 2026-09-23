@@ -348,3 +348,16 @@
     font-size: 24px;
   }
 }
+
+.dtr-native-slot:has(iframe) {
+  margin-top: 28px;
+  margin-bottom: 36px;
+}
+.dtr-banner-help {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+#dtr-price-watch {
+  scroll-margin-top: 120px;
+}

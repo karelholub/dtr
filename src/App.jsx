@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNativeBanners, NativeBannerSlot } from "./demo/NativeBanners";
 import { useLifecycle } from "./demo/useLifecycle";
 import { Personalization, PriceWatch, TripHub, Presenter } from "./demo/Demo";
 import { newQuote, priceFor, offerKey } from "./demo/model";
@@ -259,6 +260,7 @@ export function App() {
     board,
     room,
   };
+  useNativeBanners(route);
   const watch = demo.state.watch;
   const total =
     watch?.active &&
@@ -690,6 +692,7 @@ export function App() {
               </span>
             </div>
             <Personalization demo={demo} go={go} search={search} />
+            <NativeBannerSlot />
             <div className="container" id="inspiration">
               {collections.map((c, i) => (
                 <section className="collection" key={c.title}>

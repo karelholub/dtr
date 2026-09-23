@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-23",
+  "delivery": "Live Meiro SDK and public banner configuration; no local creative fallback",
+  "viewports": [1440, 390],
+  "passed": [
+    "Inline creative delivered on homepage after consent",
+    "Inline CTA navigates to the intended hotel on the current host",
+    "Popup delivered only after the hotel price-help trigger",
+    "Popup CTA opens the existing price-watch form",
+    "Popup close and Escape dismiss; keyboard focus returns to trigger",
+    "Popup session cap prevents redisplay after reload",
+    "No banner delivery on the ineligible trip-hub page",
+    "No banner configuration request when consent is declined",
+    "Consent withdrawal removes SDK content and hides popup trigger",
+    "Native impression, click and close events accepted by Meiro",
+    "Five native banner reports populated and verified in Meiro UI",
+    "Existing 12 browser regressions and two new DOM/consent regressions passed",
+    "Production build passed"
+  ],
+  "browserErrors": [],
+  "measurement": "Demo interaction counts; not unique reach or causal ROI/ROAS. Reports may include local QA traffic."
+}

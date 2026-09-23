@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { track } from "../tracking";
+import { NativeBannerGuide } from "./NativeBanners";
+import { track, readConsent } from "../tracking";
 import { hotels, asset } from "../data";
 import { textFor, emailHTML } from "./content";
 import {
@@ -74,8 +75,22 @@ export function PriceWatch({ demo, hotel, total, trip }) {
     [permission, setPermission] = useState(false);
   const s = demo.state;
   return (
-    <section className="dtr-watch">
-      <button className="dtr-link" onClick={() => setOpen(!open)}>
+    <section className="dtr-watch" id="dtr-price-watch">
+      {readConsent() === "granted" && (
+        <button
+          type="button"
+          className="dtr-link dtr-banner-help"
+          id="dtr-price-help"
+        >
+          So funktioniert der Preisalarm
+        </button>
+      )}
+      <button
+        className="dtr-link"
+        data-dtr-watch-open
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
         ♡ Preis beobachten
       </button>
       {open && (
@@ -387,6 +402,7 @@ export function Presenter({ demo, go }) {
             {[
               ["story", "Journey"],
               ["email", "Email previews"],
+              ["banners", "Meiro banners"],
               ["value", "Value & reporting"],
             ].map(([key, title]) => (
               <button
@@ -398,6 +414,7 @@ export function Presenter({ demo, go }) {
               </button>
             ))}
           </div>
+          {tab === "banners" && <NativeBannerGuide />}
           {tab === "story" && (
             <>
               <div className="dtr-columns">

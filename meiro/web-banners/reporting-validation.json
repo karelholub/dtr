@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Banner impressions",
+    "result": {
+      "result": {
+        "columns": [
+          {
+            "name": "sum(impressions)",
+            "type": "number",
+            "nullable": true
+          }
+        ],
+        "rows": [
+          [
+            8
+          ]
+        ],
+        "matchedGroupCount": 1,
+        "truncated": false,
+        "warnings": [],
+        "generatedAt": "2026-09-23T09:11:39.725Z"
+      },
+      "trendPercentage": null
+    }
+  },
+  {
+    "name": "Banner clicks",
+    "result": {
+      "result": {
+        "columns": [
+          {
+            "name": "sum(clicks)",
+            "type": "number",
+            "nullable": true
+          }
+        ],
+        "rows": [
+          [
+            7
+          ]
+        ],
+        "matchedGroupCount": 1,
+        "truncated": false,
+        "warnings": [],
+        "generatedAt": "2026-09-23T09:11:40.054Z"
+      },
+      "trendPercentage": null
+    }
+  },
+  {
+    "name": "Popup closes • includes CTA dismissal",
+    "result": {
+      "result": {
+        "columns": [
+          {
+            "name": "sum(closes)",
+            "type": "number",
+            "nullable": true
+          }
+        ],
+        "rows": [
+          [
+            4
+          ]
+        ],
+        "matchedGroupCount": 1,
+        "truncated": false,
+        "warnings": [],
+        "generatedAt": "2026-09-23T09:11:40.372Z"
+      },
+      "trendPercentage": null
+    }
+  },
+  {
+    "name": "Click / impression ratio",
+    "result": {
+      "result": {
+        "columns": [
+          {
+            "name": "sum(clicks)",
+            "type": "number",
+            "nullable": true
+          },
+          {
+            "name": "sum(impressions)",
+            "type": "number",
+            "nullable": true
+          }
+        ],
+        "rows": [
+          [
+            7,
+            8
+          ]
+        ],
+        "matchedGroupCount": 1,
+        "truncated": false,
+        "warnings": [],
+        "generatedAt": "2026-09-23T09:11:40.653Z"
+      },
+      "trendPercentage": null
+    }
+  },
+  {
+    "name": "Banner performance • interaction counts, not unique visitors",
+    "result": {
+      "result": {
+        "columns": [
+          {
+            "name": "banner_name",
+            "type": "string",
+            "nullable": true
+          },
+          {
+            "name": "sum(impressions)",
+            "type": "number",
+            "nullable": true
+          },
+          {
+            "name": "sum(clicks)",
+            "type": "number",
+            "nullable": true
+          },
+          {
+            "name": "sum(closes)",
+            "type": "number",
+            "nullable": true
+          }
+        ],
+        "rows": [
+          [
+            "DTR | In-page · Mallorca family inspiration",
+            4,
+            3,
+            0
+          ],
+          [
+            "DTR | Popup · Price-watch guide",
+            4,
+            4,
+            4
+          ]
+        ],
+        "matchedGroupCount": 2,
+        "truncated": false,
+        "warnings": [],
+        "generatedAt": "2026-09-23T09:11:40.998Z"
+      },
+      "trendPercentage": null
+    }
+  }
+]

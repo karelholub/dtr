@@ -1,0 +1,197 @@
+{
+  "name": "DTR | 04 Web Banners • demo interactions, not business uplift",
+  "defaultDateRange": {
+    "kind": "preset",
+    "days": 30
+  },
+  "reports": [
+    {
+      "id": "f6944ff7-d7bb-4ecd-84b3-e1ba9eaac151",
+      "name": "Banner impressions",
+      "attributeId": "dtr_native_banner_activity",
+      "measures": [
+        {
+          "id": "338090dc-f812-4949-a99e-127b45dc0eca",
+          "label": "Impressions",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "impressions"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "event_time",
+      "dashboardFilterDimensions": [
+        "banner_name",
+        "banner_type",
+        "host"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "a77c7b43-69a1-4c36-9e76-64cea5ddcd37",
+      "name": "Banner clicks",
+      "attributeId": "dtr_native_banner_activity",
+      "measures": [
+        {
+          "id": "f7c602e5-2332-4d06-aa28-82c8980c5a38",
+          "label": "Clicks",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "clicks"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "event_time",
+      "dashboardFilterDimensions": [
+        "banner_name",
+        "banner_type",
+        "host"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "e704c994-07c2-49e4-9e3c-340bf5fe4e34",
+      "name": "Popup closes • includes CTA dismissal",
+      "attributeId": "dtr_native_banner_activity",
+      "measures": [
+        {
+          "id": "8c15419d-46e1-4773-afec-23e1ce22006a",
+          "label": "Closes",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "closes"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "event_time",
+      "dashboardFilterDimensions": [
+        "banner_name",
+        "banner_type",
+        "host"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "metric",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "0bba2dac-3e2f-47cb-9696-ee892c85bc8a",
+      "name": "Click / impression ratio",
+      "attributeId": "dtr_native_banner_activity",
+      "measures": [
+        {
+          "id": "2ff009fb-003a-48b7-aed8-bacd64701240",
+          "label": "Clicks",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "clicks"
+          }
+        },
+        {
+          "id": "ded6fb6f-4f06-4850-b191-6fed0ec60818",
+          "label": "Impressions",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "impressions"
+          }
+        }
+      ],
+      "rateColumns": [],
+      "groupBy": [],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "event_time",
+      "dashboardFilterDimensions": [
+        "banner_name",
+        "banner_type",
+        "host"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "rate",
+      "width": "standard",
+      "height": "compact"
+    },
+    {
+      "id": "52b32bb4-03fd-4bd1-bf9c-3423f97365d1",
+      "name": "Banner performance • interaction counts, not unique visitors",
+      "attributeId": "dtr_native_banner_activity",
+      "measures": [
+        {
+          "id": "1d777e2a-2574-4d31-b862-1ea18f4b01a1",
+          "label": "Impressions",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "impressions"
+          }
+        },
+        {
+          "id": "11184ca1-df2d-4757-a371-ece43f559229",
+          "label": "Clicks",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "clicks"
+          }
+        },
+        {
+          "id": "462bcc0c-647f-4e4c-b31c-8b2706749dd9",
+          "label": "Closes",
+          "aggregation": {
+            "algorithm": "sum",
+            "dimension": "closes"
+          }
+        }
+      ],
+      "rateColumns": [
+        {
+          "id": "9fa5c86a-064d-47cd-9fea-5b5905077fe6",
+          "label": "Clicks / impressions",
+          "numeratorMeasureId": "11184ca1-df2d-4757-a371-ece43f559229",
+          "denominatorMeasureId": "1d777e2a-2574-4d31-b862-1ea18f4b01a1"
+        }
+      ],
+      "groupBy": [
+        "banner_name"
+      ],
+      "rowFilter": {
+        "predicates": []
+      },
+      "dateRangeDimension": "event_time",
+      "dashboardFilterDimensions": [
+        "banner_name",
+        "banner_type",
+        "host"
+      ],
+      "includeMissingGroups": false,
+      "limit": 50,
+      "visualization": "table",
+      "width": "standard",
+      "height": "standard"
+    }
+  ]
+}

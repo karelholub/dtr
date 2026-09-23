@@ -53,3 +53,24 @@ Local preview: `npm run dev -- --host 127.0.0.1 --port 5173`.
 Build: `npm run build`.
 Rule tests: `node --test tests/lifecycle.test.mjs`.
 Browser tests: `npm test` (set `PLAYWRIGHT_EXECUTABLE_PATH` if using an existing local Chromium).
+
+## Native Meiro Web Banners
+
+Two additional examples are **authored and delivered by Meiro**, alongside the existing website-rendered lifecycle cards. They are enabled only on the DERTOUR SDK source, on `dtrdemo.netlify.app`, `127.0.0.1` and `localhost`. Customer content, layout, page/host conditions, trigger and frequency cap live in Engage → Channels → Web Banners.
+
+| Example | Where / trigger | Frequency | Meiro editor |
+| --- | --- | --- | --- |
+| Mallorca family inspiration | Homepage, empty `#dtr-meiro-inpage` slot below search/lifecycle content | 5 impressions per SDK session | [In-page banner](https://travel.eu1.pipes.meiro.io/channels/web-banners/b356eb89-d31e-45c2-80e1-ef187bd109cc) |
+| Price-watch guide | Hotel detail → **So funktioniert der Preisalarm** | 1 impression per SDK session | [Popup banner](https://travel.eu1.pipes.meiro.io/channels/web-banners/d454c38c-3df1-4fac-be6b-2735fdae78ff) |
+
+1. Open a fresh private browser session and accept analytics cookies. The SDK and both banners are consent-gated.
+2. On the homepage, show the Mallorca card and open its editor in Meiro. Change copy, save, confirm the banner remains enabled, and reload the site: creative updates require no website deployment. The repo HTML is a configuration snapshot, not the rendering source.
+3. Click the card CTA to open the Mallorca hotel. Click **So funktioniert der Preisalarm** near the price-watch control. The native popup opens; its CTA opens the existing price-watch form. Close or press Escape to dismiss it.
+4. Refresh the hotel page and try again: the session cap prevents another popup impression. Use a fresh private session to repeat. Resetting the lifecycle scenario does not reset native SDK caps.
+5. Open [Meiro Reporting](https://travel.eu1.pipes.meiro.io/reporting) → **DTR | 04 Web Banners • demo interactions, not business uplift**. Click Refresh after ingestion/attribute processing. Filter by banner, format or host. Local QA traffic is included and can be separated using the Host filter.
+
+These two examples demonstrate **contextual page targeting**, not lifecycle-audience or treatment/control targeting. Existing lifecycle cards still demonstrate live profile decisions. Banner metrics are SDK interaction counts, not unique visitors or causal uplift. The click/impression ratio may exceed 100% if a visitor clicks more than once per display. “Closes” includes closing after the popup CTA. No email is sent by either banner.
+
+Implementation: React provides a stable empty anchor and a hotel-page trigger. The SDK creates an iframe inside the anchor or a popup at document level. On SPA navigation and consent changes, the SDK banner module is reinitialized to reevaluate page conditions and clean up old content. There is no local creative fallback. Banner CTA links stay on the current demo host; images use the existing Netlify assets.
+
+Rollback: use Disable in each new banner's Meiro editor to stop future delivery, then reload open pages. Do not change the older travel demo's banners or source. The website hook can also set `web_banners.enabled` to false if a code rollback is needed.

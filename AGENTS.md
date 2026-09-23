@@ -15,3 +15,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Use live Meiro decisions for customer-facing personalization. Label local rule previews explicitly and keep the public website generic until the current run/revision is returned.
 - Keep synthetic outcomes and illustrative ROI separate. Native Meiro dashboards use the DTR namespace and must not include the older travel demo.
 - Preserve the DERTOUR logo, red/cream palette and existing typography. React owns personalized content; SDK DOM injection must use separate empty slots.
+- Native Meiro popup and inline examples are required alongside website-rendered lifecycle cards. Meiro owns their HTML, conditions, caps and triggers. Keep SDK-owned nodes inside empty anchors, reinitialize on route/consent changes, and do not duplicate native interaction events.

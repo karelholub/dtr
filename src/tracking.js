@@ -18,6 +18,8 @@ export function startTracking() {
     collection_endpoint: ENDPOINT,
     link_tracking: { enabled: false },
     tracking_rules: { enabled: false },
+    // The route lifecycle enables banners after the SDK has loaded.
+    web_banners: { enabled: false },
   });
   window.mpt("consent", {
     storage_persistence: "granted",
@@ -47,12 +49,15 @@ export function setConsent(granted) {
       user_id: "granted",
       session_id: "granted",
     });
-  } else if (started)
+  } else if (started) {
+    window.mpt("config", { web_banners: { enabled: false } });
     window.mpt("consent", {
       storage_persistence: "denied",
       user_id: "denied",
       session_id: "denied",
     });
+  }
+  window.dispatchEvent(new Event("dtr-consent-changed"));
 }
 export function track(name, payload = {}) {
   if (readConsent() !== "granted") return;

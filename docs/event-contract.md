@@ -36,3 +36,9 @@ No downstream advertising pipes or campaigns were changed. Receipt in the input 
 `begin_checkout` now includes stable quote/booking-session IDs plus room and board. `purchase` includes quote, dates, party and booked selection; no checkout form names/emails are collected. A synthetic confirmation/cancellation updates Meiro run outcomes. Repeated state snapshots are deduplicated per run for reporting.
 
 See [demo-runbook.md](demo-runbook.md) and `meiro/manifest.json` for implementation details and limits.
+
+## Native Web Banner events
+
+The Meiro SDK automatically emits `web_banner_impression`, `web_banner_click` and `web_banner_close` for the two DTR native banners. Do not also emit these through `track()` or duplicate them as `dtr_touchpoint`. Standard payloads include `banner_id`, `banner_name`, `banner_type`, `placement`, `source_slug`, `url`, `path` and `host`; click events also include `action_text` and `href`. The DERTOUR source already defines these event types and resolves the SDK `user_id`.
+
+`dtr_native_banner_activity` selects only these event type IDs and the two DTR banner IDs. Dashboard 04 aggregates native interaction counts independently of synthetic lifecycle run outcomes and ROI. Event acceptance, responsive delivery, CTA navigation, popup close, session suppression, declined consent and React DOM ownership were checked with the live SDK and focused browser regressions.

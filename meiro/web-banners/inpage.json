@@ -1,0 +1,54 @@
+{
+  "sourceId": "0e72295b-cf85-41be-b46c-e48194e24779",
+  "name": "DTR | In-page · Mallorca family inspiration",
+  "type": "inline",
+  "isEnabled": true,
+  "priority": 5,
+  "contentMode": "html",
+  "contentHtml": "<!doctype html><html lang=\"de\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:Arial,sans-serif;color:#262626;background:transparent}a,button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid #222;outline-offset:4px}.card{background:#fff6ef;overflow:hidden;border-radius:12px}.copy{padding:32px}.eyebrow{color:#b51620;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}h2{font-size:32px;line-height:1.12;margin:0 0 16px;letter-spacing:-.6px}p{font-size:16px;line-height:1.55;margin:0 0 20px}.cta{display:inline-block;background:#d71920;color:#fff;text-decoration:none;padding:14px 22px;border-radius:5px;font-size:15px;font-weight:700;line-height:1.3}.cta:hover{background:#b5141b}.note{font-size:12px;color:#666;margin:16px 0 0}.brand{width:116px;height:32px;object-fit:contain;object-position:left;margin-bottom:22px}@media(max-width:560px){.copy{padding:24px}h2{font-size:26px}}</style></head><body><style>.card{display:grid;grid-template-columns:42% 1fr}.photo{width:100%;height:340px;min-height:300px;object-fit:cover}.copy{align-self:center}@media(max-width:560px){.card{grid-template-columns:1fr}.photo{height:180px;min-height:0}}</style><article class=\"card\" aria-label=\"Urlaubsidee Mallorca\"><img class=\"photo\" src=\"https://dtrdemo.netlify.app/assets/c810b375c1762f9b.webp\" alt=\"Blick auf die Küste und das Calimera Fido Gardens\"><div class=\"copy\"><p class=\"eyebrow\">DERTOUR · Zeit für die Familie</p><h2>Kleine Abenteuer.<br>Große Urlaubsmomente.</h2><p>Sonne auf der Haut, die Kinder im Pool und endlich Zeit füreinander. Entdecke deinen Familienurlaub auf Mallorca.</p><a class=\"cta\" href=\"/hotel/calimera-fido-gardens\" target=\"_top\">Mallorca gemeinsam entdecken →</a><p class=\"note\">Inspiration für deine nächste Reise · Demo-Angebot</p></div></article></body></html>",
+  "size": {
+    "preset": "full_width"
+  },
+  "placement": {
+    "type": "inline",
+    "anchorType": "id",
+    "anchorValue": "dtr-meiro-inpage"
+  },
+  "conditions": {
+    "mode": "all",
+    "rules": [
+      {
+        "mode": "any",
+        "rules": [
+          {
+            "field": "host",
+            "operator": "equals",
+            "value": "dtrdemo.netlify.app"
+          },
+          {
+            "field": "host",
+            "operator": "equals",
+            "value": "127.0.0.1"
+          },
+          {
+            "field": "host",
+            "operator": "equals",
+            "value": "localhost"
+          }
+        ]
+      },
+      {
+        "field": "path",
+        "operator": "equals",
+        "value": "/"
+      }
+    ]
+  },
+  "frequencyCap": {
+    "limit": 5,
+    "period": "session"
+  },
+  "displayTrigger": {
+    "type": "page_load"
+  }
+}

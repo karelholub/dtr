@@ -7,7 +7,8 @@
     "DTR trip details": "dtr_trip_details",
     "DTR message eligibility": "dtr_message_eligibility",
     "DTR touchpoints": "dtr_touchpoints",
-    "DTR offer context": "dtr_offer_context"
+    "DTR offer context": "dtr_offer_context",
+    "DTR native banner activity": "dtr_native_banner_activity"
   },
   "profileEndpoint": "0c0d29a5-72b7-4952-8000-e256bb66c8c5",
   "dashboards": [
@@ -46,6 +47,17 @@
         "9d97223b-5ba1-4372-8198-2d491ed02513",
         "39f00db5-4e14-45cf-9e78-df9c10ecbfd7",
         "691a7e53-6ce4-460f-9e02-6171084c010c"
+      ]
+    },
+    {
+      "id": "8a52e127-8754-4c21-afd4-e3fa803d198a",
+      "name": "DTR | 04 Web Banners • demo interactions, not business uplift",
+      "reports": [
+        "f6944ff7-d7bb-4ecd-84b3-e1ba9eaac151",
+        "a77c7b43-69a1-4c36-9e76-64cea5ddcd37",
+        "e704c994-07c2-49e4-9e3c-340bf5fe4e34",
+        "0bba2dac-3e2f-47cb-9696-ee892c85bc8a",
+        "52b32bb4-03fd-4bd1-bf9c-3423f97365d1"
       ]
     }
   ],
@@ -91,5 +103,15 @@
     "feedback": "4ffc7922-b310-4522-9538-f3919720acf5"
   },
   "catalog": "6c7e4704-2ed0-4bde-9c09-719d15f24a9f",
-  "touchpointEvent": "8f54a2b5-2a6b-4834-85fe-c4fa1d77da48"
+  "touchpointEvent": "8f54a2b5-2a6b-4834-85fe-c4fa1d77da48",
+  "webBanners": {
+    "inpage": {
+      "id": "b356eb89-d31e-45c2-80e1-ef187bd109cc",
+      "name": "DTR | In-page · Mallorca family inspiration"
+    },
+    "popup": {
+      "id": "d454c38c-3df1-4fac-be6b-2735fdae78ff",
+      "name": "DTR | Popup · Price-watch guide"
+    }
+  }
 }
