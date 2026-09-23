@@ -64,7 +64,7 @@ Two additional examples are **authored and delivered by Meiro**, alongside the e
 | Price-watch guide | Hotel detail → **So funktioniert der Preisalarm** | 1 impression per SDK session | [Popup banner](https://travel.eu1.pipes.meiro.io/channels/web-banners/d454c38c-3df1-4fac-be6b-2735fdae78ff) |
 
 1. Open a fresh private browser session and accept analytics cookies. The SDK and both banners are consent-gated.
-2. On the homepage, show the Mallorca card and open its editor in Meiro. Change copy, save, confirm the banner remains enabled, and reload the site: creative updates require no website deployment. The repo HTML is a configuration snapshot, not the rendering source.
+2. On the homepage, show the compact, image-free Mallorca inspiration strip and open its editor in Meiro. Change copy, save, confirm the banner remains enabled, and reload the site: creative updates require no website deployment. The repo HTML is a configuration snapshot, not the rendering source.
 3. Click the card CTA to open the Mallorca hotel. Click **So funktioniert der Preisalarm** near the price-watch control. The native popup opens; its CTA opens the existing price-watch form. Close or press Escape to dismiss it.
 4. Refresh the hotel page and try again: the session cap prevents another popup impression. Use a fresh private session to repeat. Resetting the lifecycle scenario does not reset native SDK caps.
 5. Open [Meiro Reporting](https://travel.eu1.pipes.meiro.io/reporting) → **DTR | 04 Web Banners • demo interactions, not business uplift**. Click Refresh after ingestion/attribute processing. Filter by banner, format or host. Local QA traffic is included and can be separated using the Host filter.
@@ -74,3 +74,5 @@ These two examples demonstrate **contextual page targeting**, not lifecycle-audi
 Implementation: React provides a stable empty anchor and a hotel-page trigger. The SDK creates an iframe inside the anchor or a popup at document level. On SPA navigation and consent changes, the SDK banner module is reinitialized to reevaluate page conditions and clean up old content. There is no local creative fallback. Banner CTA links stay on the current demo host; images use the existing Netlify assets.
 
 Rollback: use Disable in each new banner's Meiro editor to stop future delivery, then reload open pages. Do not change the older travel demo's banners or source. The website hook can also set `web_banners.enabled` to false if a code rollback is needed.
+
+The native in-page creative uses a compact white strip, red accent and sun icon. It deliberately avoids hotel photography and a second large split-card layout beside the website-owned lifecycle card.

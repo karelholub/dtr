@@ -46,7 +46,7 @@ export function NativeBannerGuide() {
       <ol>
         <li>
           <strong>In-page inspiration:</strong> open the homepage and accept
-          analytics cookies. The Mallorca family card appears below the search
+          analytics cookies. The compact Mallorca inspiration strip appears below the search
           and lifecycle content.
         </li>
         <li>
